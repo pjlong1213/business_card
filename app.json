@@ -1,7 +1,10 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/index"
+    ,"pages/logs/logs"
+    ,"/pages/carde/index"
+    ,"/pages/sendCarde/index"
+    ,"/pages/more/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -15,20 +18,20 @@
     "color": "#7f8389",
     "selectedColor": "#5b8bed",
     "list":[{
-      "pagePath":"",
+      "pagePath":"pages/carde/index",
       "text":"名片夹",
-      "iconPath":"",
-      "selectedIconPath":""
+      "iconPath":"/assets/images/tabbar/card.png",
+      "selectedIconPath":"/assets/images/tabbar/card_selected.png"
     },{
-      "pagePath":"",
+      "pagePath":"pages/sendCarde/index",
       "text":"发名片",
       "iconPath":"",
       "selectedIconPath":""
     },{
-      "pagePath":"",
+      "pagePath":"pages/more/index",
       "text":"更多",
-      "iconPath":"",
-      "selectedIconPath":""
+      "iconPath":"/assets/images/tabbar/more.png",
+      "selectedIconPath":"/assets/images/tabbar/more_selected.png"
     }]
   }
 }
