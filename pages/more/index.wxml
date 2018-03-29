@@ -1,2 +1,55 @@
 <!--pages/more/index.wxml-->
-<text>pages/more/index.wxml</text>
+<view class='page'>
+    <view class='page-head'>
+            <view class='me-info'>
+                <view class='me-info-top'>
+                    <view class='info-top-left'>
+                        <view class='info-logo'>
+                            <image src='{{images}}'></image>
+                        </view>
+                    </view>
+                    <view class='info-top-cenent'>递名片</view>
+                    <view class='info-top-right'>
+                        <view>“递名片”是一款为用户提供电子名片制作,名片收发，名片信息管理等功能的微信小程序。</view>
+                        <view>您的每一次使用、每一条反馈,都是我们进步的动力。我们坚信在不远的未来，一定可以实现：“递名片”,发天下!</view>
+                    </view>
+                </view>
+            </view>
+    </view>
+    <view class='page-body'>
+        <view class='cell'>
+            <view class='cell-group'>
+                <navigator hover-class="nav-hover" bindtap='onhome' class='cell-item'> 
+                    <view class='cell-item-h'>
+                        <i class="iconfont icon-msg"></i>
+                    </view>
+                    <view class='cell-item-b'>联系客服</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+                <navigator hover-class="nav-hover" url="/pages/my/invite/invite" class='cell-item'>
+                    <view class='cell-item-h'>
+                        <i class="iconfont icon-yuyue"></i>
+                    </view>
+                    <view class='cell-item-b'>使用帮助</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+                <navigator hover-class="nav-hover" url="/pages/my/cards/index" class='cell-item'>
+                    <view class='cell-item-h'>
+                        <i class="iconfont icon-mingpianjia-xuanzhong"></i>
+                    </view>
+                    <view class='cell-item-b'>添加到桌面</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+            </view>
+            <view>
+              <button class='button'>推荐给朋友</button>
+            </view>
+        </view>
+    </view>
+</view>
