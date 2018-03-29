@@ -37,40 +37,8 @@ class wxDataStorage {
         }
         //构建请求的数据接口
         this.GET_FUN = {
-            /**
-             * 获取联系人列表
-             * 
-             * @param {any} fun 回调方法 返回数据列表
-             */
-            LINKS: (fun) => {
-              console.log(333)
-                console.log(this.http.link())
-                this.http.link().get().then(res => {
-                    dataFun('LINKS', res, fun);
-                })
-            },
-            /**
-             * 客户标签列表
-             * 
-             * @param {any} fun 回调方法 返回数据列表
-             */
-            LINK_GROUPS: (fun) => {
-                let userInfo = wx.getStorageSync('userInfo');
-                console.log(16794)
-                console.log(userInfo)
-                console.log(userInfo.TenantId)
-                let groupData = {
-                  tenantId: userInfo.TenantId,
-                  userId : userInfo.UserId,
-                  params : {
-                    condition : {}
-                  }
-                }
-                console.log(groupData)
-                this.http.group().post(groupData).then(res => {
-                    dataFun('LINK_GROUPS', res, fun);
-                })
-            },
+           
+            
             /**
              * 拉客列表
              * 
@@ -81,25 +49,7 @@ class wxDataStorage {
                     dataFun('MATCH_VISITORS', res, fun);
                 })
             },
-            /**
-             * 展商列表
-             * 
-             * @param {any} fun 回调方法 返回数据列表
-             */
-            MATCH_EXS: (fun) => {
-                this.http.matchEx().get().then(res => {
-                    console.log("5555555555")
-                    console.log(res)
-                    dataFun('MATCH_EXS', res, fun);
-                })
-            },
-            COMPANY_INFO: (fun) => {
-                this.http.aComp().get((res)=>{
-                    res.then(r=>{
-                        dataFun('COMPANY_INFO', r, fun);
-                    })
-                })
-            }
+            
         }
     }
     /**

@@ -70,39 +70,14 @@ class HttpResource {
 
                 } else if (response.statusCode !== 200) {
                     wx.redirectTo({
-                        url: '/pages/login/login'
+                        url: '/pages/carde/index'
                     })
-                } else if (response.data.resCode == "400001") {
-                  wx.showToast({
-                    title: '约请重复提交',
-                    icon: "loading"
-                  })
-                } else if (response.data.resCode == "400002") {
-                  wx.showToast({
-                    title: '不能约请自己',
-                    icon: "loading"
-                  })
-                  
-                } else if (response.data.resCode == "400000") {
-                  wx.showToast({
-                    title: '参数错误',
-                    icon: "loading"
-                  })
-
                 } 
                 
                 // wx.hideToast()
                 return response
             },
-            // responseError: (responseError) => {
-            //     wx.hideToast()
-            //     wx.showModal({
-            //         title: '提示',
-            //         confirmColor: '#6288d5',
-            //         content: '请求失败,请检查网络是否正常'
-            //     });
-            //     return responseError
-            // },
+            
         }]
     }
 }

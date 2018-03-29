@@ -4,7 +4,7 @@ import wxRequestHelper from './helper/wxRequestHelper'
 import wxCache from './helper/GlobalCache'
 import wxDataStorage from './helper/wxDataStorage'
 import tool from './helper/Tools'
-import wxService from "/services/wxService";
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -49,7 +49,6 @@ App({
     request: new wxRequestHelper(),
     gc: new wxCache(),
     wxDataStorage: new wxDataStorage(),
-    tool: new tool(),
-    services: new wxService()
+    tool: new tool()
   }
 })

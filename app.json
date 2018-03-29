@@ -1,10 +1,10 @@
 {
   "pages":[
-    "pages/index/index"
-    ,"pages/logs/logs"
-    ,"/pages/carde/index"
-    ,"/pages/sendCarde/index"
-    ,"/pages/more/index"
+    
+    
+    "pages/carde/index"
+    ,"pages/sendCarde/index"
+    ,"pages/more/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,21 +17,22 @@
   "tabBar": {
     "color": "#7f8389",
     "selectedColor": "#5b8bed",
-    "list":[{
+    "list":[
+      {
       "pagePath":"pages/carde/index",
       "text":"名片夹",
-      "iconPath":"/assets/images/tabbar/card.png",
-      "selectedIconPath":"/assets/images/tabbar/card_selected.png"
+      "iconPath":"/assets/image/tabber/card.png",
+      "selectedIconPath":"/assets/image/tabber/card_selected.png"
     },{
       "pagePath":"pages/sendCarde/index",
       "text":"发名片",
-      "iconPath":"",
-      "selectedIconPath":""
+      "iconPath":"/assets/image/tabber/card.png",
+      "selectedIconPath":"/assets/image/tabber/card_selected.png"
     },{
       "pagePath":"pages/more/index",
       "text":"更多",
-      "iconPath":"/assets/images/tabbar/more.png",
-      "selectedIconPath":"/assets/images/tabbar/more_selected.png"
+      "iconPath":"/assets/image/tabber/more.png",
+      "selectedIconPath":"/assets/image/tabber/more_selected.png"
     }]
   }
 }
