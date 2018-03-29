@@ -16,7 +16,7 @@
   "component": true,
   "tabBar": {
     "color": "#7f8389",
-    "selectedColor": "#5b8bed",
+    "selectedColor": "#9CF8A5",
     "list":[
       {
       "pagePath":"pages/carde/index",
