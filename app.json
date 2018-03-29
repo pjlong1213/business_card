@@ -7,6 +7,28 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#EFEFF4"
+  },
+  "component": true,
+  "tabBar": {
+    "color": "#7f8389",
+    "selectedColor": "#5b8bed",
+    "list":[{
+      "pagePath":"",
+      "text":"名片夹",
+      "iconPath":"",
+      "selectedIconPath":""
+    },{
+      "pagePath":"",
+      "text":"发名片",
+      "iconPath":"",
+      "selectedIconPath":""
+    },{
+      "pagePath":"",
+      "text":"更多",
+      "iconPath":"",
+      "selectedIconPath":""
+    }]
   }
 }

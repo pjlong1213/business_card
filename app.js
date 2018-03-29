@@ -1,15 +1,22 @@
-//app.js
+import wxServices from './helper/wxService'
+import wxHelper from './helper/wxHelper'
+import wxRequestHelper from './helper/wxRequestHelper'
+import wxCache from './helper/GlobalCache'
+import wxDataStorage from './helper/wxDataStorage'
+import tool from './helper/Tools'
+import wxService from "/services/wxService";
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
 
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        
       }
     })
     // 获取用户信息
@@ -35,5 +42,14 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  $: {
+    service: new wxServices(),
+    wxHelper: new wxHelper(),
+    request: new wxRequestHelper(),
+    gc: new wxCache(),
+    wxDataStorage: new wxDataStorage(),
+    tool: new tool(),
+    services: new wxService()
   }
 })
