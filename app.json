@@ -1,8 +1,8 @@
 {
   "pages":[
     
-    
-    "pages/carde/index"
+    "pages/carde/serch/index"
+    ,"pages/carde/index"
     ,"pages/sendCarde/index"
     ,"pages/more/index"
   ],

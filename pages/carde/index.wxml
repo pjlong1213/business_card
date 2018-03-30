@@ -1,2 +1,11 @@
 <!--pages/carde/index.wxml-->
-<text>pages/carde/index.wxml</text>
+
+<view class="search-box">
+  <view class='search-icon'>
+      <i class="iconfont icon-search"></i>
+  </view>
+  <input type='search' auto-focus placeholder='搜索' disabled="false" bindtap='onFilterInput' value="{{filter}}"></input>
+  <view class='search-delete' bindtap='onFilterDelete'>
+      <i class="iconfont icon-guanbi_r"></i>
+  </view>
+</view>

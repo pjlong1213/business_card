@@ -1,1 +1,6 @@
 /* pages/carde/index.wxss */
+@import '/styles/search.wxss';
+.search-icon{
+  margin-left:300rpx;
+
+}
