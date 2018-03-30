@@ -1,44 +1,73 @@
 /* pages/sendCarde/index.wxss */
 .page{
-  width: 100%;
-  height: 100%;
+
 }
 
 .page-one{
-  width: 100%;
-  height: 100%;
+  width: 750rpx;
+  height: 1100rpx;
 }
 
 .one-image{
   display: flex;
   flex-direction:row;
-  width: 100%;
-  height: 95%;
+  width: 750rpx;
+  height: 1075rpx;
+  justify-content: space-between;
 }
 .image-left{
-  width: 5%;
-  height: 100%;
+  width: 35rpx;
+  height: 1075rpx;
+}
+  .image-left image{
+  width: 35rpx;
+  height: 1075rpx;
 }
 .image-right{
-  width: 5%;
-  height: 100%;
+  width: 35rpx;
+  height: 1075rpx;
+}
+  .image-right image{
+  width: 35rpx;
+  height: 1075rpx;
 }
 .image-image{
+    display:flex;
     flex-direction:column;
+    width: 680rpx;
+    height: 1075rpx;
+    justify-content: space-between;
+    align-items: stretch;
 }
-
-
 .image-top{
-
+  width: 680rpx;
+  height: 800rpx;
+}
+  .image-top image{
+  width: 680rpx;
+  height: 800rpx;
 }
 .image-down{
-
+  width: 680rpx;
+  height: 35rpx;
+}
+  .image-down image{
+  width: 680rpx;
+  height: 35rpx;
 }
 .image-conent{
+  display: flex;
   flex-direction:row;
+  width: 680rpx;
+  height: 240rpx;
 }
 .image-conents{
-
+  width: 340rpx;
+  height: 240rpx;
+}
+  .image-conents image{
+  width: 340rpx;
+  height: 240rpx;
 }
 
 .arrow-right{

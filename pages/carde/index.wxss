@@ -21,16 +21,17 @@
   }
     .body-all{
       width: 50%;
+      display: flex;
       flex-direction: column;
-      align-content: center;
-      justify-content: center;
       align-items: center;
     }
       .body-icon{
-
+        width: 50%;
+        height: 100rpx;
       }
       .body-text{
-
+        color: white;
+        font-size: 24rpx;
       }
 
 .page-conent{
@@ -73,6 +74,7 @@
       Text-indent:20px;
       flex-direction:column;
       align-items: center;
+      align-content: center;
       justify-content: center;
     }
       .text-h{
