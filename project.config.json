@@ -30,12 +30,25 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "更多",
-					"pathName": "pages/more/index"
+					"pathName": "pages/more/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发名片",
+					"pathName": "pages/sendCarde/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "名片夹",
+					"pathName": "pages/carde/index",
+					"query": ""
 				}
 			]
 		}

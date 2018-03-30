@@ -1,1 +1,23 @@
 /* pages/sendCarde/index.wxss */
+.page{
+
+}
+
+.page-one{
+
+}
+
+.one-image{
+  display: flex;
+  flex-direction:row;
+}
+.image-left{
+  width: 5%
+}
+.image-right{
+  width: 5%
+}
+
+.arrow-right{
+
+}

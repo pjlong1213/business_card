@@ -1,4 +1,5 @@
 // pages/more/index.js
+let _this
 Page({
 
   /**
@@ -70,4 +71,26 @@ Page({
       duration: 2000
     }) 
   },
+  onShareAppMessage: function (e) {
+    wx.showShareMenu({
+      withShareTicket:true
+    })
+    return{
+      success:function(e){
+
+        console.log(e)
+      }
+    }
+    
+  },
+  tuijian(){
+    let date = {
+      from:"button",
+      target:"button"
+    }
+    this.onShareAppMessage(date)
+    
+    
+  },
+
 })
