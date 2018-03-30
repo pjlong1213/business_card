@@ -48,7 +48,7 @@
                 </navigator>
             </view>
             <view>
-              <button class='button'>推荐给朋友</button>
+              <button class='button' open-type='share' bindtap='tuijian'>推荐给朋友</button>
             </view>
         </view>
     </view>

@@ -1,4 +1,5 @@
 // pages/more/index.js
+let _this
 Page({
 
   /**
@@ -60,7 +61,26 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
-  }
+  onShareAppMessage: function (e) {
+    wx.showShareMenu({
+      withShareTicket:true
+    })
+    return{
+      success:function(e){
+
+        console.log(e)
+      }
+    }
+    
+  },
+  tuijian(){
+    let date = {
+      from:"button",
+      target:"button"
+    }
+    this.onShareAppMessage(date)
+    
+    
+  },
+
 })

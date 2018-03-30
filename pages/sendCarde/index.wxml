@@ -1,7 +1,9 @@
 <!--pages/sendCarde/index.wxml-->
 <view>
     <view>
-        
+        <view>
+          <image ></image>
+        </view>
 
     </view>
 </view>
