@@ -39,7 +39,7 @@
                 </navigator>
                 <navigator hover-class="nav-hover" bindtap="" class='cell-item'>
                     <view class='cell-item-h'>
-                        <i class="iconfont icon-mingpianjia-xuanzhong"></i>
+                        <i class="iconfont icon-tianjia"></i>
                     </view>
                     <view class='cell-item-b'>添加到桌面</view>
                     <view class='cell-item-f'>

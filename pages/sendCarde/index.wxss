@@ -1,21 +1,44 @@
 /* pages/sendCarde/index.wxss */
 .page{
-
+  width: 100%;
+  height: 100%;
 }
 
 .page-one{
-
+  width: 100%;
+  height: 100%;
 }
 
 .one-image{
   display: flex;
   flex-direction:row;
+  width: 100%;
+  height: 95%;
 }
 .image-left{
-  width: 5%
+  width: 5%;
+  height: 100%;
 }
 .image-right{
-  width: 5%
+  width: 5%;
+  height: 100%;
+}
+.image-image{
+    flex-direction:column;
+}
+
+
+.image-top{
+
+}
+.image-down{
+
+}
+.image-conent{
+  flex-direction:row;
+}
+.image-conents{
+
 }
 
 .arrow-right{

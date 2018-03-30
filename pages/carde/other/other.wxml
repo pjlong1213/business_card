@@ -1,0 +1,3 @@
+<view class='pages'>
+  <image class='image' mode='scaleToFill' src='/assets/image/index/instructions.png'></image>
+</view>

@@ -16,16 +16,22 @@
     height: 90rpx;
     padding-left: 30rpx;
     padding-right: 30rpx;
-    border-bottom: 1rpx solid #efeff4;
+    border-bottom: 1rpx solid #efeff4; 
     background: #fff;
 }
 .card-head:hover {
     opacity: 0.6;
 }
 .card-head i {
-    font-weight: bold;
+  color: #c7c7cc;
+  font-size: 40rpx;
+}
+.text{
+  width: 700rpx;
 }
 .i-more1{
+    padding-right: 20rpx;
+    margin-right: 20rpx;
     transition: all 0.4s ease-in-out;
     -webkit-transition: all 0.4s ease-in-out;
 }

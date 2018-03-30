@@ -1,1 +1,133 @@
 /* pages/carde/index.wxss */
+@import '/styles/search.wxss';
+.search-icon{
+  margin-left:300rpx;
+
+}
+
+.page{
+
+}
+.page-head{
+    background-color: #515151;
+}
+
+
+  .head-body{
+    width: 100%;
+    height: 150rpx;
+    display: flex;
+
+  }
+    .body-all{
+      width: 50%;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+      .body-icon{
+
+      }
+      .body-text{
+
+      }
+
+.page-conent{
+
+}
+  .cards{
+    background-color: white;
+    border-bottom: 20rpx solid #efeff4;
+
+  }
+  .card-head{
+    border-bottom: 1rpx solid #efeff4;
+    font-size: 34rpx;
+    display: flex;
+    height: 70rpx;
+    align-content: center;
+    align-items: center;
+  }
+    .card-head-h{
+      Text-indent:20px;
+      color: #6ab7f2;
+      width: 100rpx;
+    }
+    .card-head-b{
+      width: 300rpx;
+    }
+    .card-head-f{
+      color: green;
+      font-size: 24rpx;
+    }
+  .card-body{
+    display: flex;
+    flex-direction:row;
+  }
+    .card-body-i{
+      width: 250rpx;
+      height: 150rpx;
+    }
+    .card-body-t{
+      Text-indent:20px;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+    }
+      .text-h{
+        font-weight: bold;
+      }
+      .text-b{
+        font-size: 24rpx;
+      }
+
+  .cards-down{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c7c7cc;
+    border-bottom: 20rpx solid #efeff4;
+  }
+
+.page-down{
+
+}
+  .cell {
+    font-size: 34rpx;
+  }
+
+  .cell-item {
+    display: flex;
+    display: -webkit-flex;
+    height: 88rpx;
+    line-height: 88rpx;
+    padding-right: 30rpx;
+    border-bottom: 1rpx solid #e5e5e5;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .cell-item-h {
+    padding: 0 30rpx; 
+    align-items: center;
+  }
+
+  .cell-item-h image {
+    width: 50rpx;
+    height: 50rpx;
+    display: block; 
+  }
+
+  .cell-item-b {
+    flex: 1;
+  }
+
+  .cell-item-h i {
+    color: #6ab7f2;
+    font-size: 40rpx;
+  }
+
+  .cell-item-f {
+    color: #c7c7cc;
+  }

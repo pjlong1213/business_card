@@ -2,18 +2,18 @@
 <view class='page'>
     <view wx:if="{{true}}" class='page-one'>
           <view class='one-image'>
-              <view><image class='image-left' mode='widthFix' src="/assets/image/index/sendCardIndex-left.png" ></image></view>
-              <view>
-                  <view><image class='image' mode='widthFix' src="/assets/image/index/sendCardIndex-top.png" ></image></view>
-                  <view>
-                      <view><image class='image' mode='widthFix' src="/assets/image/index/sendCardIndex-conent.png" ></image></view>
-                      <view><image class='image' mode='widthFix' src="/assets/image/index/sendCardIndex-conents.png" ></image></view>
+              <view class='image-left'><image  mode='scaleToFill' src="/assets/image/index/sendCardIndex-left.png" ></image></view>
+              <view class='image-image'>
+                  <view  class='image-top'><image mode='scaleToFill' src="/assets/image/index/sendCardIndex-top.png" ></image></view>
+                  <view class='image-conent'>
+                      <view class='image-conents'><image mode='scaleToFill' src="/assets/image/index/sendCardIndex-conent.png" ></image></view>
+                      <view class='image-conents'><image mode='scaleToFill' src="/assets/image/index/sendCardIndex-conents.png" ></image></view>
                   </view>
-                  <view><image class='image' mode='widthFix' src="/assets/image/index/sendCardIndex-down.png" ></image></view>
+                  <view class='image-down'><image mode='scaleToFill' src="/assets/image/index/sendCardIndex-down.png" ></image></view>
               </view>
-              <view><image class='image-right' mode='widthFix' src="/assets/image/index/sendCardIndex-right.png" ></image></view>
+              <view class='image-right'><image mode='scaleToFill' src="/assets/image/index/sendCardIndex-right.png" ></image></view>
           </view>
-          <view class='arrow-right'><i class="iconfont icon-arrow-left"></i></view>
+          <view class='arrow-right'><i class="iconfont icon-arrow-right"></i></view>
     </view>
 
     <view wx:if="{{}}" class='page-one'>

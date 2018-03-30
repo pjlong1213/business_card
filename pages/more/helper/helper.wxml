@@ -2,7 +2,7 @@
   <view class='page-head'>
     <view class='card'>
         <view class='card-head' bindtap='onchangeone'>
-          <view>如何制作电子名片?</view>
+          <view class='text'>如何制作电子名片?</view>
           <view class="i-more1 {{one?'i-more2':''}}">
             <i class="iconfont icon-xiala"></i>
           </view>
@@ -14,7 +14,7 @@
     </view>
     <view class='card'bindtap='onchangetwo'>
         <view class='card-head'>
-          <view>如何发送自己的名片?</view>
+          <view class='text'>如何发送自己的名片?</view>
           <view class="i-more1 {{two?'i-more2':''}}">
             <i class="iconfont icon-xiala"></i>
           </view>
@@ -26,7 +26,7 @@
     </view>
     <view class='card'bindtap='onchangethree'>
             <view class='card-head'>
-              <view>如何自己的名片添加更多的信息?</view>
+              <view class='text'>如何自己的名片添加更多的信息?</view>
               <view class="i-more1 {{three?'i-more2':''}}">
                 <i class="iconfont icon-xiala"></i>
               </view>
@@ -38,7 +38,7 @@
     </view>
     <view class='card'bindtap='onchangefour'>
             <view class='card-head'>
-              <view>如何找到保存过的名片?</view>
+              <view class='text'>如何找到保存过的名片?</view>
               <view class="i-more1 {{four?'i-more2':''}}">
                 <i class="iconfont icon-xiala"></i>
               </view>
