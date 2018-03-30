@@ -47,7 +47,6 @@
 .cell-item {
   display: flex;
   display: -webkit-flex;
-
   padding: 30rpx;
   padding-left: 0;
   border-bottom: 1rpx solid #e5e5e5;
@@ -56,17 +55,19 @@
 }
 
 .cell-item-h {
+  height: 30rpx;
   padding:0 30rpx;
-    align-items:center;
+  align-items:center;
 }
 
 .cell-item-h image {
-  width: 50rpx;
-  height: 50rpx;
+  width: 30rpx;
+  height: 30rpx;
   display:block;
 }
 
 .cell-item-b {
+  height: 30rpx;
   flex: 1;
 }
 
@@ -75,6 +76,7 @@
   font-size: 40rpx;
 }
 .cell-item-f{
+  height: 30rpx;
   color: #c7c7cc;
 }
 

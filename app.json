@@ -5,6 +5,8 @@
     "pages/carde/index"
     ,"pages/sendCarde/index"
     ,"pages/more/index"
+    ,"pages/more/helper/helper"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

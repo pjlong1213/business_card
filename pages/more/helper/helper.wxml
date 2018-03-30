@@ -1,0 +1,65 @@
+<view class='page'>
+  <view class='page-head'>
+    <view class='card'>
+        <view class='card-head' bindtap='onchangeone'>
+          <view>如何制作电子名片?</view>
+          <view class="i-more1 {{one?'i-more2':''}}">
+            <i class="iconfont icon-xiala"></i>
+          </view>
+        </view>
+        <view wx:if="{{one}}" class='card-right'>
+          <text>在“发名片”页面,可以选择给自己的名片“拍照识别”,或者利用提供的模板“手动输入”个人信息。/n</text>
+          <text>您还可以访问：xiaovbao.com,在我的主页扫码登陆后,体验更丰富的名片设计功能</text>
+        </view>
+    </view>
+    <view class='card'bindtap='onchangetwo'>
+        <view class='card-head'>
+          <view>如何发送自己的名片?</view>
+          <view class="i-more1 {{two?'i-more2':''}}">
+            <i class="iconfont icon-xiala"></i>
+          </view>
+        </view>
+        <view wx:if="{{two}}" class='card-right'>
+          <text>在“发名片”页面,点击发送按钮,即可把您的名片发送至微信聊天;对方使用微信“扫一扫”,扫描您的名片二维码,亦可保存您的名片信息。/n</text>
+          <text>在“发名片”页面,点击“名片图片区域”,可以生成名片图片,保存至相册后,可便携地发送至微信聊天或者分享到“朋友圈”。</text>
+        </view>
+    </view>
+    <view class='card'bindtap='onchangethree'>
+            <view class='card-head'>
+              <view>如何自己的名片添加更多的信息?</view>
+              <view class="i-more1 {{three?'i-more2':''}}">
+                <i class="iconfont icon-xiala"></i>
+              </view>
+            </view>
+            <view wx:if="{{three}}" class='card-right'>
+              <text>您可以在名片信息编辑页面下方,点击“添加更多信息”,即可为自己添加多个手机、邮箱、地址,以及其他信息。/n</text>
+              <text>同时在“发名片”页面左滑,可以添加不同身份的名片。</text>
+            </view>
+    </view>
+    <view class='card'bindtap='onchangefour'>
+            <view class='card-head'>
+              <view>如何找到保存过的名片?</view>
+              <view class="i-more1 {{four?'i-more2':''}}">
+                <i class="iconfont icon-xiala"></i>
+              </view>
+            </view>
+            <view wx:if="{{four}}" class='card-right'>
+              <text>保存的名片都存在“名片夹”中;您可以通过顶部“搜索栏”、字母条等方式快速找到特定的名片。/n</text>
+              <text>每张名片点击进入详情后，通过点击“设置”按钮,可以进行“存入手机通讯录”、“转发名片”、“删除名片”等操作。</text>
+            </view>
+    </view>
+  </view>
+  <view class='page-body'>
+    <view class='page-body-head'>商务合作</view>
+    <view class='page-body-right'>
+      <text>
+        联系邮箱：unicorn@xiaovbao.com/n
+        访问网址：xiaovbao.com/n
+        企业定制服务（请加微信号）：xiaovbao
+      </text>
+    </view>
+  </view>
+  <view>
+     <button class='button'>开始使用递名片</button>
+  </view>
+</view>

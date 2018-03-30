@@ -19,7 +19,7 @@
     <view class='page-body'>
         <view class='cell'>
             <view class='cell-group'>
-                <navigator hover-class="nav-hover" bindtap='onhome' class='cell-item'> 
+                <navigator hover-class="nav-hover" bindtap='onservice' class='cell-item'> 
                     <view class='cell-item-h'>
                         <i class="iconfont icon-msg"></i>
                     </view>
@@ -28,7 +28,7 @@
                         <i class="iconfont icon-arrow-right"></i>
                     </view>
                 </navigator>
-                <navigator hover-class="nav-hover" url="/pages/my/invite/invite" class='cell-item'>
+                <navigator hover-class="nav-hover" url="/pages/more/helper/helper" class='cell-item'>
                     <view class='cell-item-h'>
                         <i class="iconfont icon-yuyue"></i>
                     </view>
@@ -37,7 +37,7 @@
                         <i class="iconfont icon-arrow-right"></i>
                     </view>
                 </navigator>
-                <navigator hover-class="nav-hover" url="/pages/my/cards/index" class='cell-item'>
+                <navigator hover-class="nav-hover" bindtap="" class='cell-item'>
                     <view class='cell-item-h'>
                         <i class="iconfont icon-mingpianjia-xuanzhong"></i>
                     </view>
