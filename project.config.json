@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -49,6 +49,11 @@
 					"name": "搜索",
 					"pathName": "pages/carde/serch/index",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发名片",
+					"pathName": "pages/sendCarde/index"
 				}
 			]
 		}

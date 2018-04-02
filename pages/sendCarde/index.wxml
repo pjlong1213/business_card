@@ -1,6 +1,6 @@
 <!--pages/sendCarde/index.wxml-->
 <view class='page'>
-    <view wx:if="{{pageIndex}}" class='page-one'>
+    <view wx:if="{{pageIndex == 0}}" class='page-one'>
           <view class='one-image'>
               <view class='image-image'>
                   <view  class='image-top'>
@@ -16,43 +16,51 @@
                           <image mode='scaleToFill' src="/assets/image/index/sendCardIndexone-down-right.png" ></image>
                       </view>
                   </view>
-                  <view class='image-down'>
-                      <view class='image-downs'><image mode='scaleToFill' src='/assets/image/tabber/spot.png'></image></view>
-                      <view class='image-downs'><image mode='scaleToFill' src='/assets/image/tabber/spot-select.png'></image></view>
-                  </view>
+
               </view>
           </view>
-          <view class='arrow-left' bindtap='changpageindex'><image src='/assets/image/tabber/back.png'></image></view>
     </view>
-
-    <!-- <view wx:if="{{!pageindex}}" class='page-two'> -->
-    <view wx:if="{{!pageIndex}}" class='page-two'>
-          <view class='details'>
-              <view bindtap='onsave' class='details-top'>
-                  <image mode='scaleToFill' src="/assets/image/index/sendCardIndextwo-top.png" ></image>
-              </view>
-              <view  class='details-conent'>
-                  <view class='details-conent-name'>潘九龙</view>
-                  <view class='details-conent-text'>南京腾宣威</view>
-                  <view class='details-conent-text'>开发部</view>
-
-                  <view class='details-conent-image'>
-                      <image mode='scaleToFill' src='/assets/image/index/sendCardIndextwo-conent.png'></image>
-                      <view class='details-conent-set'>设置</view>
+    <view wx:for="{{cardList}}">
+        <view wx:if="{{pageIndex == index +1}}" class='page-two'>
+              <view class='details'>
+                  <view bindtap='onsave' class='details-top'>
+                      <image mode='scaleToFill' src="/assets/image/index/sendCardIndextwo-top.png" ></image>
                   </view>
+                  <view  class='details-conent'>
+                      <view class='details-conent-name'>{{item.name}}</view>
+                      <view class='details-conent-text'>{{item.company}}</view>
+                      <view class='details-conent-text'>{{item.branch}}</view>
 
-                  <view class='details-conent-down'>微信扫一扫二维码,存入名片</view>
-
+                      <view class='details-conent-image'>
+                          <image mode='scaleToFill' src='/assets/image/index/sendCardIndextwo-conent.png'></image>
+                      </view>
+                      <view class='details-conent-down'>
+                          <view class='details-conent-small'>微信扫一扫二维码,存入名片</view>
+                          <view class='details-conent-set'>设置</view>
+                      </view>
+                  </view>
+                  <view class='details-button'>
+                      <button open-type='share' bindtap='tuijian'>发送本张名片</button>
+                  </view>
               </view>
-              <view class='details-button'>
-                  <button open-type='share' bindtap='tuijian'>发送本张名片</button>
-              </view>
-              <view class='image-down'>
-                  <view class='image-downs'><image mode='scaleToFill' src='/assets/image/tabber/spot-select.png'></image></view>
-                  <view class='image-downs'><image mode='scaleToFill' src='/assets/image/tabber/spot.png'></image></view>
-              </view>
-          </view>
-          <view class='arrow-right' bindtap='changpageindex'><image src='/assets/image/tabber/forward.png'></image></view>
+        </view>
     </view>
-
+    <view wx:if="{{cardList.length != 0}}">
+        <view class='image-down'>
+          <block  wx:for="{{cardList.length+1}}">
+            <view wx:if="{{pageIndex == index}}" class='image-downs'>
+                <image mode='scaleToFill' src='/assets/image/tabber/spot.png'></image>
+            </view>
+            <view wx:else class='image-downs'>
+                <image mode='scaleToFill' src='/assets/image/tabber/spot-select.png'></image>
+            </view>
+          </block>
+        </view> 
+        <view wx:if="{{pageIndex != cardList.length}}" class='arrow-left' bindtap='changpageback'>
+            <image src='/assets/image/tabber/back.png'></image>
+        </view>
+        <view wx:if="{{pageIndex != 0}}" class='arrow-right' bindtap='changpageforward'>
+            <image src='/assets/image/tabber/forward.png'></image>
+        </view>
+    </view>
 </view>

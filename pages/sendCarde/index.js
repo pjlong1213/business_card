@@ -1,19 +1,24 @@
 // pages/sendCarde/index.js
-let pageIndex = true;
+let pageIndex = 0;
+let cardList = [];
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    cardList = [{ name: "潘九龙", company: "南京腾宣威", branch: "开发部" }, { name: "潘九龙", company: "南京腾宣威", branch: "开发部" }]
+      this.setData({
+        pageIndex,
+        cardList
+      })
   },
 
   /**
@@ -78,10 +83,16 @@ Page({
       }
     })
   },
-  changpageindex: function() {
+  changpageback: function() {
 
     this.setData({
-      pageIndex: !this.data.pageIndex
+      pageIndex: ++this.data.pageIndex
+    })
+  },
+  changpageforward: function() {
+
+    this.setData({
+      pageIndex: --this.data.pageIndex
     })
   },
   tuijian() {
@@ -94,7 +105,7 @@ Page({
   onsave() {
     wx.showModal({
       title: '提示',
-      content: '',
+      content: '您可以将生成的名片图片，保存至手机相册，以便发送至微信朋友圈或微信聊天群。',
       success: function (res) {
         if (res.confirm) {
           console.log('用户点击确定')
