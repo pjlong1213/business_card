@@ -1,2 +1,39 @@
 <!--pages/carde/serch/index.wxml-->
-<text>pages/carde/serch/index.wxml</text>
+<view class='body'>
+  <view class="search">
+      <view class='search-body'>
+          <view class='search-input'>
+              <view class="search-box" bindtap='onFilterInput'>
+                  <view class='search-icon'>
+                      <i class="iconfont icon-search"></i>
+                  </view>
+                  <input type='search' auto-focus placeholder='请输入姓名、公司等进行搜索' style='color:#C0C0C0;' value=""></input>
+                  <view class='search-delete' bindtap='onFilterDelete'>
+                      <i class="iconfont icon-guanbi_r"></i>
+                  </view>
+              </view>
+          </view>
+          <view class='search-btn' bindtap='onTapSearch'>
+            <view>取消</view>
+          </view>
+      </view>
+  </view> 
+  <view class='body-content'>
+    <view class='body-title'>我收到的名片</view>
+    <view class='carte'>
+      <view class='content'>
+        <view class='carte-image'>
+          <image class='image'  src='/assets/image/index/20180330100755.png'></image>
+        </view>
+        <view class='carte-Info'>
+          <view class='info name'>周继征</view>
+          <view class='info'>南京腾宣威软件科技有线公司，江苏省第100家</view>
+          <view class='info'>项目经理</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  
+</view>
+

@@ -1,13 +1,17 @@
 /* pages/carde/index.wxss */
 @import '/styles/search.wxss';
+
+.search{
+  background-color: #515151;
+  
+}
+
 .search-icon{
   margin-left:300rpx;
+  color: #515151;
 
 }
 
-.page{
-
-}
 .page-head{
     background-color: #515151;
 }
@@ -69,6 +73,7 @@
     .card-body-i{
       width: 250rpx;
       height: 150rpx;
+      background-color: red;
     }
     .card-body-t{
       Text-indent:20px;
@@ -79,21 +84,30 @@
     }
     .card-body-b{
       display: flex;
-      align-items: center;
-      align-content: center;
+       align-items: center; 
       justify-content: center;
-      Text-indent:20px;
+      /* Text-indent:20px; */
     }
       .button{
-        Text-indent:20px;
-        background-color: #0e932e;
+        height: 80rpx;
+        font-size: 30rpx;
+        line-height: 80rpx;
+        width: 250rpx;
+        align-content: center;
+        /* Text-indent:20px; */
+        background-color: #00BD30;
         color: white;
+        margin-left: 30rpx;
       }
       .text-h{
+        font-size: 32rpx;
         font-weight: bold;
+        margin-top: 8rpx;
+        
       }
       .text-b{
         font-size: 24rpx;
+        margin-top: 8rpx;
       }
 
   .cards-down{
@@ -145,3 +159,62 @@
   .cell-item-f {
     color: #c7c7cc;
   }
+  .carte{
+  width: 100%;
+  height: 150rpx;
+  margin: 20rpx;
+}
+.content{
+  height: 125rpx;
+  display: flex;
+}
+.carte-image{
+  width : 200rpx;
+  background-color: blue;
+}
+.image{
+    width: 200rpx;
+    height: 125rpx;
+}
+.carte-Info{
+  padding-left: 30rpx;
+  width : 150rpx;
+
+}
+.info{
+  margin-top: 8rpx;
+  height: 30rpx;
+  font-size: 24rpx;
+  color: #C0C0C0;
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; 
+  overflow: hidden;
+}
+.info.name{
+  font-weight: bold;
+  font-size : 32rpx;
+  height: 50rpx;
+}
+
+
+.carte-Infos{
+  padding-left: 30rpx;
+  width : 300rpx;
+
+}
+.infos{
+  margin-top: 8rpx;
+  height: 30rpx;
+  color: #4C4C4C;
+  font-size: 24rpx;
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; 
+  overflow: hidden;
+}
+.infos.name{
+  font-weight: bold;
+  font-size: 32rpx;
+  height: 50rpx;
+}

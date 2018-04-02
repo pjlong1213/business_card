@@ -40,20 +40,14 @@
 				},
 				{
 					"id": -1,
-					"name": "发名片",
-					"pathName": "pages/sendCarde/index",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "名片夹",
 					"pathName": "pages/carde/index",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "递名片",
-					"pathName": "pages/sendCarde/outCarde/outCarde",
+					"name": "搜索",
+					"pathName": "pages/carde/serch/index",
 					"query": ""
 				}
 			]
