@@ -1,5 +1,14 @@
 /* pages/carde/index.wxss */
 @import '/styles/search.wxss';
+.page_body{
+  width: 100%;
+  height: 100rpx;
+  background-color: #646369;
+  
+}
+.kongge{
+  height: 20rpx;
+}
 .search-icon{
   margin-left:300rpx;
 

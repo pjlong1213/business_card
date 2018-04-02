@@ -14,11 +14,7 @@ Page({
   onLoad: function (options) {
   
   },
-  onFilterInput: function (){
-    wx.navigateTo({
-      url: 'pages/carde/serch/index',
-    })
-  },
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -32,7 +28,12 @@ Page({
   onShow: function () {
   
   },
-
+  onFilterInput: function () {
+    console.log("1111111111111111")
+    wx.navigateTo({
+      url: '/pages/carde/serch/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
