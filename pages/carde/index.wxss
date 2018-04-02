@@ -77,6 +77,18 @@
       align-content: center;
       justify-content: center;
     }
+    .card-body-b{
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      Text-indent:20px;
+    }
+      .button{
+        Text-indent:20px;
+        background-color: green;
+        color: white;
+      }
       .text-h{
         font-weight: bold;
       }

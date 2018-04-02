@@ -30,7 +30,7 @@
           <view class='arrow-right'><i class="iconfont icon-arrow-right"></i></view>
     </view>
 
-    <view wx:if="{{}}" class='page-one'>
+    <view wx:if="{{}}" class='page-two'>
           <image class='image' mode='widthFix' src="/assets/image/tabber/sendCardIndex.png" ></image>
           <view></view>
           <view>

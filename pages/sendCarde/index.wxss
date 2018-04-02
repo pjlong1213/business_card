@@ -71,5 +71,11 @@
 }
 
 .arrow-right{
-
+position: fixed; 
+bottom: 300px; 
+left: 50px; 
+/* background: rgba(0,0,0,0.48);    */
+/* border-radius: 50rpx;  */
+overflow: hidden;  
+z-index: 500; 
 }

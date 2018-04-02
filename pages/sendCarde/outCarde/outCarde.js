@@ -1,4 +1,3 @@
-// pages/sendCarde/index.js
 Page({
 
   /**

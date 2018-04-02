@@ -38,12 +38,24 @@
             <view class='card-body' wx:for="{{false}}">
               <view class='card-body-i'><image src=""></image></view>
               <view class='card-body-t'>
-                  <view></view>
-                  <view></view>
-                  <view></view>
+                  <view class='text-h'>{{item}}</view>
+                  <view class='text-b'>{{item}}</view>
+                  <view class='text-b'>{{item}}</view>
               </view>
             </view>
-            <view wx:if="{{true}}" style='color:#c7c7cc;background-color: #efeff4'>暂无数据</view>
+            <view class='card-body' wx:if="{{true}}">
+              <view class='card-body-i'><image src=""></image></view>
+              <view class='card-body-t'>
+                  <view class='text-h' style='color:#efeff4'>我的名字</view>
+                  <view class='text-b' style='color:#efeff4'>公司名称</view>
+                  <view class='text-b' style='color:#efeff4'>职务</view>
+              </view>
+              <view class='card-body-b'>
+                <navigator url="/pages/sendCarde/outCarde/outCarde">
+                  <button class='button'>新建我的名片</button>
+                </navigator>
+              </view>
+            </view>
         </view>
         <view class='cards'>
             <view class='card-head'>
