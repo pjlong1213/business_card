@@ -1,15 +1,164 @@
 <!--pages/carde/index.wxml-->
-<view class='page_body'>
-<view class='kongge'></view>
-<view class="search-box" bindtap='onFilterInput'>
-  <view class='search-icon'>
-      <i class="iconfont icon-search"></i>
-  </view>
-  <input type='search' auto-focus placeholder='搜索' disabled="false"  value="{{filter}}"></input>
-  <view class='search-delete' bindtap='onFilterDelete'>
-      <i class="iconfont icon-guanbi_r"></i>
-  </view>
-</view>
+
+<view class="page">
+
+     <view class="search" wx:if="{{isShow}}">
+        <view class='search-body'>
+            <view class='search-input'>
+                <view class="search-box" bindtap='onFilterInput'>
+                    <view class='search-icon'>
+                        <i class="iconfont icon-search"></i>
+                    </view>
+                    <input type='search' auto-focus placeholder='搜索' disabled='false' style='color:#515151;' value="搜索"></input>
+                    <view class='search-delete' bindtap='onFilterDelete'>
+                        <i class="iconfont icon-guanbi_r"></i>
+                    </view>
+                </view>
+            </view>
+            
+        </view>
+    </view>  
+    <view class='page-head'>
+          <!-- <view class='search-icon'>
+              <i class="iconfont icon-search"></i>
+          </view>
+          <input type='search' auto-focus placeholder='搜索' disabled="false" bindtap='onFilterInput' value="{{filter}}"></input>
+          <view class='search-delete' bindtap='onFilterDelete'>
+              <i class="iconfont icon-guanbi_r"></i>
+          </view>  -->
+        <view class='head-search'>
+        
+        </view>
+    
+        <view class='head-body'>
+            <view class='body-all'>
+                <view class='body-icon'></view>
+                <view class='body-text'>纸名片收纳</view>
+            </view>
+            <view class='body-all'>
+                <view class='body-icon'></view>
+                <view class='body-text'>微信群换名片</view>
+            </view>
+        </view>
+
+    </view>
+
+
+
+
+
+    <view class='page-conent'>
+        <view class='cards'>
+            <view class='card-head'>
+              <view class='card-head-h'><i class="iconfont icon-tianjia"></i></view>
+              <view class='card-head-b'>我的名片</view>
+            </view>
+            <view class='card-body' wx:for="{{false}}">
+              <view class='card-body-i'><image src=""></image></view>
+              <view class='card-body-t'>
+                  <view class='text-h'>{{item}}</view>
+                  <view class='text-b'>{{item}}</view>
+                  <view class='text-b'>{{item}}</view>
+              </view>
+            </view>
+            <view class='card-body' wx:if="{{true}}">
+               <!-- <view class='card-body-i'><image src=""></image></view>
+              <view class='card-body-t'>
+                  <view class='text-h' style='color:#C0C0C0'>我的名字</view>
+                  <view class='text-b' style='color:#C0C0C0'>公司名称</view>
+                  <view class='text-b' style='color:#C0C0C0'>职务</view>
+              </view>  -->
+               <view class='carte'>
+                <view class='content'>
+                  <view class='carte-image'>
+                    <image class='image'  src='/assets/image/index/20180330100755.png'></image>
+                  </view>
+                  <view class='carte-Info'>
+                    <view class='info name'>我的名字</view>
+                    <view class='info'>公司名称</view>
+                    <view class='info'>职务</view>
+                  </view>
+                  <view class='card-body-b'>
+                    <navigator url="/pages/sendCarde/outCarde/outCarde">
+                      <button class='button'>新建我的名片</button>
+                    </navigator>
+                  </view>
+                </view>
+              </view> 
+              <!-- <view class='card-body-b'>
+                <navigator url="/pages/sendCarde/outCarde/outCarde">
+                  <button class='button'>新建我的名片</button>
+                </navigator>
+              </view> -->
+            </view>
+        </view>
+        <view class='cards'>
+            <view class='card-head'>
+              <view class='card-head-h'><i class="iconfont icon-tianjia"></i></view>
+              <view class='card-head-b'>我收到的名片</view>
+              <view class='card-head-f'>{{1}}位联系人没收到我的名片</view>
+            </view>
+            <!-- <view class='card-body'>
+              <view class='card-body-i'><image src=""></image></view>
+              <view class='card-body-t'>
+                  <view class='text-h'>递名片团队</view>
+                  <view class='text-b'>南京腾宣威科技有限公司</view>
+                  <view class='text-b'>递名片助手</view>
+              </view>
+            </view> -->
+            <view class='carte'>
+                <view class='content'>
+                  <view class='carte-image'>
+                    <image class='image'  src='/assets/image/index/20180330100755.png'></image>
+                  </view>
+                  <view class='carte-Infos'>
+                    <view class='infos name'>递名片团队</view>
+                    <view class='infos'>南京腾宣威科技有限公司</view>
+                    <view class='infos'>递名片助手</view>
+                  </view>
+                  
+                </view>
+              </view> 
+            <view class='card-body' wx:for="{{false}}">
+              <view class='card-body-i'><image src=""></image></view>
+              <view class='card-body-t'>
+                  <view></view>
+                  <view></view>
+                  <view></view>
+              </view>
+            </view>
+        </view>
+        <view class='cards-down'>{{1}}张名片</view>
+    </view>
+
+
+
+
+    <view class='page-down'>
+      <view class='cell'>
+        <navigator hover-class="nav-hover"  class='cell-item'>
+            <view class='cell-item-h'>
+                <i class="iconfont icon-tianjia"></i>
+            </view>
+            <view class='cell-item-b'>添加到桌面</view>
+            <view class='cell-item-f'>
+                <i class="iconfont icon-arrow-right"></i>
+            </view>
+        </navigator>
+        <navigator hover-class="nav-hover" url="/pages/carde/other/other" class='cell-item'>
+            <view class='cell-item-h'>
+                <i class="iconfont icon-msg"></i>
+            </view>
+            <view class='cell-item-b'>如何在微信中找到递名片小程序?</view>
+            <view class='cell-item-f'>
+                <i class="iconfont icon-arrow-right"></i>
+            </view>
+        </navigator>
+      </view>
+    </view>
+
+
 
 </view>
+
 

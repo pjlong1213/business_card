@@ -3,8 +3,12 @@
     
     "pages/carde/serch/index"
     ,"pages/carde/index"
+    ,"pages/carde/other/other"
     ,"pages/sendCarde/index"
+    ,"pages/sendCarde/outCarde/outCarde"
     ,"pages/more/index"
+    ,"pages/more/helper/helper"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -26,7 +30,7 @@
     },{
       "pagePath":"pages/sendCarde/index",
       "text":"发名片",
-      "iconPath":"/assets/image/tabber/card.png",
+      "iconPath":"/assets/image/tabber/sendCard.png",
       "selectedIconPath":"/assets/image/tabber/card_selected.png"
     },{
       "pagePath":"pages/more/index",

@@ -1,0 +1,73 @@
+
+
+.page-head{
+
+}
+
+.card{
+  background-color: white;
+  border-right: 10rpx solid #efeff4;
+  justify-content: space-between;
+}
+.card-head{
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    height: 90rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    border-bottom: 1rpx solid #efeff4; 
+    background: #fff;
+}
+.card-head:hover {
+    opacity: 0.6;
+}
+.card-head i {
+  color: #c7c7cc;
+  font-size: 40rpx;
+}
+.text{
+  width: 700rpx;
+}
+.i-more1{
+    padding-right: 20rpx;
+    margin-right: 20rpx;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+.i-more2{
+    transform: rotate(180deg);
+}
+
+.card-right{
+  border-bottom: 5rpx solid #efeff4;
+  Text-indent:40px;
+  color: #888;
+  font-size: 28rpx;
+}
+
+.page-body{
+  margin-top: 50rpx;
+  border-top: 1rpx solid white;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-body-head{
+  margin-top: 50rpx;
+  font-size: 34rpx
+}
+
+.page-body-right{
+  margin: 5rpx 10rpx 50rpx 10rpx;
+  Text-indent:40px;
+  color: #888;
+  font-size: 28rpx;
+}
+
+.button{
+  background-color: white;
+  width: 95%;
+}
