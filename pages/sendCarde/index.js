@@ -1,4 +1,5 @@
 // pages/sendCarde/index.js
+let pageIndex = true;
 Page({
 
   /**
@@ -76,5 +77,29 @@ Page({
         })
       }
     })
-  } 
+  },
+  changpageindex: function() {
+
+    this.setData({
+      pageIndex: !this.data.pageIndex
+    })
+  },
+  tuijian() {
+    let date = {
+      from: "button",
+      target: "button"
+    }
+    this.onShareAppMessage(date)
+  },
+  onsave() {
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        }
+      }
+    })
+  },
 })

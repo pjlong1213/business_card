@@ -59,7 +59,7 @@
       width: 300rpx;
     }
     .card-head-f{
-      color: green;
+      color: #0e932e;
       font-size: 24rpx;
     }
   .card-body{
@@ -86,7 +86,7 @@
     }
       .button{
         Text-indent:20px;
-        background-color: green;
+        background-color: #0e932e;
         color: white;
       }
       .text-h{

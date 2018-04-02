@@ -1,42 +1,58 @@
 <!--pages/sendCarde/index.wxml-->
 <view class='page'>
-    <view wx:if="{{true}}" class='page-one'>
+    <view wx:if="{{pageIndex}}" class='page-one'>
           <view class='one-image'>
-              <view class='image-left'>
-                  <image  mode='scaleToFill' src="/assets/image/index/sendCardIndex-left.png" ></image>
-              </view>
               <view class='image-image'>
                   <view  class='image-top'>
-                      <image mode='scaleToFill' src="/assets/image/index/sendCardIndex-top.png" ></image>
+                      <image mode='scaleToFill' src="/assets/image/index/sendCardIndexone-top.png" ></image>
                   </view>
                   <view class='image-conent'>
                     <navigator url="/pages/sendCarde/outCarde/outCarde">
                       <view class='image-conents'>
-                          <image mode='scaleToFill' src="/assets/image/index/sendCardIndex-conent.png" ></image>
+                          <image mode='scaleToFill' src="/assets/image/index/sendCardIndexone-down-left.png" ></image>
                       </view>
                     </navigator>
                       <view class='image-conents' bindtap='chooseimage'>
-                          <image mode='scaleToFill' src="/assets/image/index/sendCardIndex-conents.png" ></image>
+                          <image mode='scaleToFill' src="/assets/image/index/sendCardIndexone-down-right.png" ></image>
                       </view>
                   </view>
                   <view class='image-down'>
-                      <image mode='scaleToFill' src="/assets/image/index/sendCardIndex-down.png" ></image>
+                      <view class='image-downs'><image mode='scaleToFill' src='/assets/image/tabber/spot.png'></image></view>
+                      <view class='image-downs'><image mode='scaleToFill' src='/assets/image/tabber/spot-select.png'></image></view>
                   </view>
               </view>
-              <view class='image-right'>
-                  <image mode='scaleToFill' src="/assets/image/index/sendCardIndex-right.png" ></image>
-              </view>
           </view>
-          <view class='arrow-right'><i class="iconfont icon-arrow-right"></i></view>
+          <view class='arrow-left' bindtap='changpageindex'><image src='/assets/image/tabber/back.png'></image></view>
     </view>
 
-    <view wx:if="{{}}" class='page-two'>
-          <image class='image' mode='widthFix' src="/assets/image/tabber/sendCardIndex.png" ></image>
-          <view></view>
-          <view>
-              <view></view>
-              <view></view>
+    <!-- <view wx:if="{{!pageindex}}" class='page-two'> -->
+    <view wx:if="{{!pageIndex}}" class='page-two'>
+          <view class='details'>
+              <view bindtap='onsave' class='details-top'>
+                  <image mode='scaleToFill' src="/assets/image/index/sendCardIndextwo-top.png" ></image>
+              </view>
+              <view  class='details-conent'>
+                  <view class='details-conent-name'>潘九龙</view>
+                  <view class='details-conent-text'>南京腾宣威</view>
+                  <view class='details-conent-text'>开发部</view>
+
+                  <view class='details-conent-image'>
+                      <image mode='scaleToFill' src='/assets/image/index/sendCardIndextwo-conent.png'></image>
+                      <view class='details-conent-set'>设置</view>
+                  </view>
+
+                  <view class='details-conent-down'>微信扫一扫二维码,存入名片</view>
+
+              </view>
+              <view class='details-button'>
+                  <button open-type='share' bindtap='tuijian'>发送本张名片</button>
+              </view>
+              <view class='image-down'>
+                  <view class='image-downs'><image mode='scaleToFill' src='/assets/image/tabber/spot-select.png'></image></view>
+                  <view class='image-downs'><image mode='scaleToFill' src='/assets/image/tabber/spot.png'></image></view>
+              </view>
           </view>
+          <view class='arrow-right' bindtap='changpageindex'><image src='/assets/image/tabber/forward.png'></image></view>
     </view>
 
 </view>
