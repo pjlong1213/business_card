@@ -5,8 +5,9 @@
     </view>
 
     <view class='page-body'>
-        <view></view>
-    
-    
+        <view class='page-body-all'>
+        
+        
+        </view>
     </view>
 </view>

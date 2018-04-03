@@ -1,18 +1,28 @@
 // pages/sendCarde/index.js
+<<<<<<< HEAD
+=======
+let pageIndex = 0;
+let cardList = [];
+>>>>>>> 80a055e61bca55c3f1a69f1ae30071bf6fffdb1d
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    display: '',
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    cardList = [{ name: "潘九龙", company: "南京腾宣威", branch: "开发部" }, { name: "潘九龙", company: "南京腾宣威", branch: "开发部" }]
+      this.setData({
+        pageIndex,
+        cardList
+      })
   },
 
   /**
@@ -76,5 +86,52 @@ Page({
         })
       }
     })
+<<<<<<< HEAD
   } 
+=======
+  },
+  changpageback: function() {
+
+    this.setData({
+      pageIndex: ++this.data.pageIndex
+    })
+  },
+  changpageforward: function() {
+
+    this.setData({
+      pageIndex: --this.data.pageIndex
+    })
+  },
+  tuijian() {
+    let date = {
+      from: "button",
+      target: "button"
+    }
+    this.onShareAppMessage(date)
+  },
+  onsave() {
+    wx.showModal({
+      title: '提示',
+      content: '您可以将生成的名片图片，保存至手机相册，以便发送至微信朋友圈或微信聊天群。',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        }
+      }
+    })
+  },
+  showview: function () {
+    this.setData({
+      display: "block"
+    })
+  },
+  hideview: function () {
+    this.setData({
+      display: "none"
+    })
+  },
+  ondelete (){
+    console.log("删除")
+  }
+>>>>>>> 80a055e61bca55c3f1a69f1ae30071bf6fffdb1d
 })
