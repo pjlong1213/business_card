@@ -53,7 +53,14 @@
 				{
 					"id": -1,
 					"name": "发名片",
-					"pathName": "pages/sendCarde/index"
+					"pathName": "pages/sendCarde/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "递名片",
+					"pathName": "pages/sendCarde/outCarde/outCarde",
+					"query": ""
 				}
 			]
 		}

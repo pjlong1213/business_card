@@ -36,7 +36,7 @@
                       </view>
                       <view class='details-conent-down'>
                           <view class='details-conent-small'>微信扫一扫二维码,存入名片</view>
-                          <view class='details-conent-set'>设置</view>
+                          <view class='details-conent-set' bindtap='showview'>设置</view>
                       </view>
                   </view>
                   <view class='details-button'>
@@ -55,12 +55,23 @@
                 <image mode='scaleToFill' src='/assets/image/tabber/spot-select.png'></image>
             </view>
           </block>
-        </view> 
-        <view wx:if="{{pageIndex != cardList.length}}" class='arrow-left' bindtap='changpageback'>
-            <image src='/assets/image/tabber/back.png'></image>
         </view>
-        <view wx:if="{{pageIndex != 0}}" class='arrow-right' bindtap='changpageforward'>
-            <image src='/assets/image/tabber/forward.png'></image>
-        </view>
+
+            <view wx:if="{{pageIndex != cardList.length}}" class='arrow-left' bindtap='changpageback'>
+                <image src='/assets/image/tabber/back.png'></image>
+            </view>
+            <view wx:if="{{pageIndex != 0}}" class='arrow-right' bindtap='changpageforward'>
+                <image src='/assets/image/tabber/forward.png'></image>
+            </view>
+
     </view>
 </view>
+
+  <view class='set-page' bindtap='hideview' style='display:{{display}}'>
+    <view class='set-button' style='display:{{display}}'>
+      <view class='set-buttons' bindtap=''>生成我的名片图</view>
+      <view class='set-buttons' bindtap=''>给我的名片排序</view>
+      <view class='set-buttons' bindtap=''>修改本张名片</view>
+      <view class='set-buttons' bindtap='ondelete'>删除本张名片</view>
+    </view>
+  </view>

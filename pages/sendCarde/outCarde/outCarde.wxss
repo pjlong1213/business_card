@@ -1,21 +1,33 @@
-.page-head {
-  top: 0;
-  background-color: #515151;
+.page{
   display: flex;
-  padding: 20rpx 30rpx;
-  font-size: 28rpx;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  box-shadow: 0 0 10rpx rgba(174, 174, 174, 0.4);
-  box-sizing: border-box;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
-  .page-head-h{
-  color: #fff;
+
+  .page-head {
+    top: 0;
+    background-color: #515151;
+    display: flex;
+    padding: 20rpx 30rpx;
+    font-size: 28rpx;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 0 10rpx rgba(174, 174, 174, 0.4);
+    box-sizing: border-box;
+    justify-content: space-between;
   }
-  .page-head-f{
-  color: green;
-  font-weight: bold;
-  font-size: 38rpx;
+    .page-head-h{
+    color: #fff;
+    }
+    .page-head-f{
+    color: #0e932e;
+    font-weight: bold;
+    font-size: 38rpx;
+    }
+
+  .page-body{
+    width: 96%;
+    top: 100rpx;
+    border:2 style  #515151;
   }

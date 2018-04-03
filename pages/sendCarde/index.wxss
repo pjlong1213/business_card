@@ -164,4 +164,31 @@ z-index: 500;
   background: rgba(0,0,0,0.48);
   border-radius: 50rpx;
 }
-
+.set-button{
+  color: black;
+  /* display: none;   */
+  text-align: center;
+  position: absolute;   
+  width: 650rpx;
+  height: 320rpx;  
+  background-color: white;
+  left:50rpx;
+  top:300rpx;
+}
+.set-buttons{
+  border-bottom: 2rpx solid #efeff4;
+  width: 650rpx;
+  height: 80rpx;
+  z-index: 600;
+}
+.set-page{
+  display: none;  
+  position: fixed;  
+  top: 0%;  
+  left: 0%;  
+  width: 100%;  
+  height: 100%; 
+  background: rgba(0,0,0,0.48);
+  /* background-color: black;   */
+  z-index: 550;
+}

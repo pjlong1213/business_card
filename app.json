@@ -31,7 +31,7 @@
       "pagePath":"pages/sendCarde/index",
       "text":"发名片",
       "iconPath":"/assets/image/tabber/sendCard.png",
-      "selectedIconPath":"/assets/image/tabber/card_selected.png"
+      "selectedIconPath":"/assets/image/tabber/sendCard_selected.png"
     },{
       "pagePath":"pages/more/index",
       "text":"更多",

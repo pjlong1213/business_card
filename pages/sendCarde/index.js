@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    display: '',
 
   },
 
@@ -113,4 +114,17 @@ Page({
       }
     })
   },
+  showview: function () {
+    this.setData({
+      display: "block"
+    })
+  },
+  hideview: function () {
+    this.setData({
+      display: "none"
+    })
+  },
+  ondelete (){
+    console.log("删除")
+  }
 })
