@@ -3,13 +3,27 @@
 
 .search{
   background-color: #515151;
+  height: 100rpx;
+}
+.image-cords image{
   
+  padding: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
 }
 
 .search-icon{
   margin-left:300rpx;
   color: #515151;
 
+}
+.image-icon{
+  margin-right: 20rpx;
+}
+.image-title{
+  
+  width: 50rpx;
+  height: 50rpx;
 }
 
 .page-head{
@@ -56,14 +70,17 @@
   }
     .card-head-h{
       Text-indent:20px;
-      color: #6ab7f2;
+      color: #96999E;
       width: 100rpx;
+    }
+    .card-head-h i{
+      font-size: 40rpx;
     }
     .card-head-b{
       width: 300rpx;
     }
     .card-head-f{
-      color: #0e932e;
+      color: green;
       font-size: 24rpx;
     }
   .card-body{
@@ -216,5 +233,9 @@
 .infos.name{
   font-weight: bold;
   font-size: 32rpx;
+  height: 50rpx;
+}
+.image-auditor{
+  width: 50rpx;
   height: 50rpx;
 }

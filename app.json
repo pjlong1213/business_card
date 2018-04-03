@@ -8,6 +8,7 @@
     ,"pages/sendCarde/outCarde/outCarde"
     ,"pages/more/index"
     ,"pages/more/helper/helper"
+    ,"pages/carde/album/index"
     
   ],
   "window":{

@@ -14,7 +14,11 @@ Page({
   onLoad: function (options) {
   
   },
-  
+  selectAlbum(){
+    wx.navigateTo({
+      url: '/pages/carde/album/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

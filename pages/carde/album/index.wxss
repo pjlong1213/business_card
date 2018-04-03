@@ -1,0 +1,6 @@
+/* pages/carde/album/index.wxss */
+.page-head{
+  width: 100%;
+  height: 300rpx;
+  background-color: #696969
+}

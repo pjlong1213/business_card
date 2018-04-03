@@ -1,0 +1,10 @@
+<!--pages/carde/album/index.wxml-->
+<view class='page'>
+  <view class='page-head'>
+    <view class='page-head-left'>
+      <view class='page-head-left-shooting'>
+        
+      </view>
+    </view>
+  </view>
+</view>
