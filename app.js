@@ -8,15 +8,30 @@ import tool from './helper/Tools'
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
 
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        
+        console.log(res.code)
+        var code = res.code
+        var appId = 'wx447a9da914f5cde6';
+        var secret = 'c7708825748c31bb27bbb162b1b4f71c';
+        wx.request({
+          url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + code + '&grant_type=authorization_code',
+          data: {},
+          header: {
+            'content-type': 'json'
+          },
+          success: function (res) {
+            var openid = res.data.openid //返回openid
+            wx.setStorageSync("openId", openid)
+            console.log('openid为' + openid);
+          }
+        })
       }
     })
     // 获取用户信息

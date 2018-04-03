@@ -25,7 +25,13 @@
   </view>
   <view class='page-body'>
     <view class='check-carde '>
-      
+      <view class='check-carde-title'>
+        <view>待核对的名片</view>
+        <view>
+          <view></view>
+        </view>
+        
+      </view>
     </view>
   </view>
 </view>

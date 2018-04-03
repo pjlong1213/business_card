@@ -16,7 +16,7 @@ module.exports = {
         /**
          * 小程序的 app secret
          */
-        SECRET: 'bc2c775925ff8a74de1535358ca9a009',
+      SECRET: 'c7708825748c31bb27bbb162b1b4f71c',
         /**
          * 微信端 API 接口
          */

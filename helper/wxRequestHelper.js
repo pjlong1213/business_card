@@ -14,11 +14,36 @@ let _structure = (controller_Name, paramDefaults, actions, options) => {
   return http;
 }
 
+let _getOpenId = (cell) => {
+
+  let openId = wx.getStorageSync('openId');
+  console.log(userInfo)
+  // let exInfo = wx.getStorageSync('exInfo');
+  // console.log(exInfo)
+  console.log(typeof cell == 'function')
+  if (openId  && typeof cell == 'function') {
+    cell(openId)
+    return true;
+  } else {
+    wx.removeStorage({ key: 'openId' })
+  }
+}
 
 class wxRequestHelper {
-  constructor() { }
+  constructor() {}
+  contact(){
+    var http = _structure("/data/queryList/Contact")
+    return{
+      get : ()=>{
+        if(_getOpenId((openId)=>{
+          
+        })){
 
-  
+        }
+        return http.post(data)
+      }
+    }
+  }
 }
 
 export default wxRequestHelper
