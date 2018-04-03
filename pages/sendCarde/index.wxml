@@ -69,9 +69,9 @@
 
   <view class='set-page' bindtap='hideview' style='display:{{display}}'>
     <view class='set-button' style='display:{{display}}'>
-      <view class='set-buttons' bindtap=''>生成我的名片图</view>
-      <view class='set-buttons' bindtap=''>给我的名片排序</view>
-      <view class='set-buttons' bindtap=''>修改本张名片</view>
+      <view class='set-buttons' bindtap='onsave'>生成我的名片图</view>
+      <view class='set-buttons' bindtap='onOrderBy'>给我的名片排序</view>
+      <view class='set-buttons' bindtap='onupdata'>修改本张名片</view>
       <view class='set-buttons' bindtap='ondelete'>删除本张名片</view>
     </view>
   </view>

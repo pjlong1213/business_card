@@ -1,33 +1,144 @@
 .page{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
 }
-
-  .page-head {
-    top: 0;
-    background-color: #515151;
-    display: flex;
-    padding: 20rpx 30rpx;
-    font-size: 28rpx;
-    position: fixed;
+  .page-all{
     width: 100%;
-    z-index: 1;
-    box-shadow: 0 0 10rpx rgba(174, 174, 174, 0.4);
-    box-sizing: border-box;
-    justify-content: space-between;
   }
-    .page-head-h{
-    color: #fff;
+  .form{
+    width: 100%;
+  }
+    .head {
+      top: 0;
+      background-color: #515151;
+      display: flex;
+      padding: 20rpx 30rpx;
+      font-size: 28rpx;
+      position: fixed;
+      width: 100%;
+      z-index: 200;
+      box-shadow: 0 0 10rpx rgba(174, 174, 174, 0.4);
+      box-sizing: border-box;
+      justify-content: space-between;
     }
-    .page-head-f{
-    color: #0e932e;
-    font-weight: bold;
-    font-size: 38rpx;
-    }
+      .head-h{
+      color: #fff;
+      }
+      .head-f{
+        height: 50rpx;
+      }
+         .head-f-btn{
+          /* height: 40rpx; */
+          background-color: #515151;
+          color: #0e932e;
+          font-weight: bold;
+          font-size: 38rpx;
+          line-height:1;
+        } 
+        button[class="head-f-btn"]::after {
+          border: 0;
+        } 
 
-  .page-body{
-    width: 96%;
-    top: 100rpx;
-    border:2 style  #515151;
-  }
+    .body{
+      display: flex;
+      border-top:100rpx solid #efeff4;
+      background-color: white;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    .body-body{
+      width: 90%;
+    }
+      .body-image{
+        width: 100%;
+        height: 400rpx;
+      }
+        .body-image image{
+          width: 100%;
+          height: 400rpx;
+        }
+
+      .body-select{
+        width: 100%;
+        height: 150rpx;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        scroll-x:true;
+        white-space: nowrap;
+      }
+        .select-image{
+          width: 170rpx;
+          height: 120rpx;
+          border: 15rpx solid #fff;
+          display: inline-block
+        }
+          .select-image image{
+            box-shadow: 3rpx 3rpx 3rpx 3rpx #515151;
+            width: 170rpx;
+            height: 120rpx;
+          }
+      
+      .body-message{
+        display: flex;
+        flex-direction: row;
+        border-bottom:3rpx solid #efeff4;
+        border-top: 10rpx solid #fff;
+        height: 60rpx;
+      }
+        .body-message-h{
+          color: red;
+          width: 5%;
+          text-align: center;
+        }
+        .body-message-b{
+          width: 25%;
+          text-align: center;
+        }
+        .body-message-t{
+          width: 30%;
+          text-align: center;
+        }
+    .body-btn{
+      padding-top: 30rpx;
+      padding-bottom: 30rpx;
+    }
+      .body-btn button{
+        width: 350rpx;
+        height: 70rpx;
+        background-color: #fff;
+        color: #0e932e;
+        font-size: 30rpx;
+        border: 1rpx solid #0e932e;
+      }
+    .body-textarea{
+      width: 100%;
+      height:350rpx;
+      border: 1rpx solid #bfbfbf;
+      border-color: #bfbfbf;
+    }
+      .body-textarea-head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .body-textarea textarea{
+        width: 95%;
+      }
+    .body-album{
+      border-top: 20rpx solid #fff;
+      border-bottom: 20rpx solid #fff;
+    }
+    .album-text{
+      border-bottom: 20rpx solid #fff;
+    }
+    .album-add{
+      border: 1rpx solid #bfbfbf;
+      width: 200rpx;
+      height: 200rpx;
+    }
+      .album-add image{
+      border: 25rpx solid #fff;
+      width: 150rpx;
+      height: 150rpx;
+    }
