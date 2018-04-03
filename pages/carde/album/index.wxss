@@ -1,6 +1,48 @@
 /* pages/carde/album/index.wxss */
 .page-head{
   width: 100%;
-  height: 300rpx;
-  background-color: #696969
+  height: 150rpx;
+  background-color: #696969;
+  display: flex
+}
+.page-head-left{
+  width: 50%;
+  height: 150rpx;
+   /* background-color: red;  */
+}
+.page-head-lefts{
+  width: 100%;
+  height: 100rpx;
+  /* background-color: blue; */
+  margin-top: 25rpx;
+  display: flex;
+}
+.page-head-lefts.Photo{
+  border-left: 2rpx solid white;
+}
+
+.page-left-shooting{
+  
+  padding-top: 25rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.page-left-shooting.i{
+  
+  padding-left: 100rpx;
+  
+}
+.page-left-shooting image{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.page-left-shooting.l{
+
+  width: 140rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: white;
 }

@@ -1,4 +1,6 @@
 // pages/carde/album/index.js
+let _this
+let setNoRefresh = false;
 Page({
 
   /**
@@ -12,9 +14,53 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    _this = this
   },
-
+  onShooting(e){
+    let type = e.currentTarget.dataset.type
+    //状态
+    let status
+    //图片的临时路径
+    if (type == "shooting"){
+      status = "camera"
+      _this.onImage(1, status)
+    }
+    if (type == "photo"){
+      status = "album "
+      _this.onImage(5, status)
+    }
+    
+   
+  },
+  onImage(count, status){
+    setNoRefresh = true;
+    wx.chooseImage({
+      count: count,
+      sourceType: [status],
+      success: function (res) {
+        let tempFilePaths = res.tempFilePaths[0]
+        _this.onUploadFile(tempFilePaths)
+      },
+    })
+  },
+  onUploadFile(tempFilePaths){
+    wx.uploadFile({
+      url: "https://deal.xiaovbao.cn/applet/album/upload",
+      filePath: tempFilePaths,
+      name: "exhibitor-linkmain-headimg-jiangchao",
+      success: function (res){
+        let data = JSON.parse(res.data)
+        if (data.code == 0) {
+          wx.showToast({
+            title: '上传成功',
+          })
+          _this.setData({
+            imageUrl: data.data.imgUrl
+          })
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -26,7 +72,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    if (setNoRefresh) {
+      setNoRefresh = false;
+      return;
+    }
   },
 
   /**

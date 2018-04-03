@@ -1,9 +1,8 @@
 // pages/sendCarde/index.js
-<<<<<<< HEAD
-=======
+
 let pageIndex = 0;
 let cardList = [];
->>>>>>> 80a055e61bca55c3f1a69f1ae30071bf6fffdb1d
+
 Page({
 
   /**
@@ -86,9 +85,9 @@ Page({
         })
       }
     })
-<<<<<<< HEAD
-  } 
-=======
+
+  
+
   },
   changpageback: function() {
 
@@ -133,5 +132,5 @@ Page({
   ondelete (){
     console.log("删除")
   }
->>>>>>> 80a055e61bca55c3f1a69f1ae30071bf6fffdb1d
+
 })
