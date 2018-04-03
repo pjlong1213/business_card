@@ -1,0 +1,9 @@
+<view class='page'>
+
+    <view class='text'>
+        <view class='text-head'>没有参与换名片的微信群</view>
+        <view>您可以在微信群中发送自己的名片,</view>
+        <view>体验此功能。</view>
+    </view>
+
+</view>

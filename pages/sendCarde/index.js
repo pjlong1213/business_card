@@ -1,6 +1,8 @@
 // pages/sendCarde/index.js
+
 let pageIndex = 0;
 let cardList = [];
+
 Page({
 
   /**
@@ -83,6 +85,9 @@ Page({
         })
       }
     })
+
+  
+
   },
   changpageback: function() {
 
@@ -132,4 +137,5 @@ Page({
   ondelete (){
     console.log("删除")
   },
+
 })

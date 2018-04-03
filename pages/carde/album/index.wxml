@@ -1,0 +1,37 @@
+<!--pages/carde/album/index.wxml-->
+<view class='page'>
+  <view class='page-head'>
+    <view class='page-head-left' >
+      <view class='page-head-lefts shooting' bindtap='onShooting' data-type='shooting'>
+        <view class='page-left-shooting i'>
+          <image mode='scaleToFill'  src='/assets/image/index/3.1拍摄.png'></image>
+        </view>
+        <view class='page-left-shooting l'>
+          拍摄名片
+        </view>
+        
+      </view>
+    </view>
+    <view class='page-head-left'>
+      <view class='page-head-lefts Photo'  bindtap='onShooting' data-type='photo'>
+        <view class='page-left-shooting i'>
+          <image mode='scaleToFill'  src='/assets/image/index/相册.png'></image>
+        </view>
+        <view class='page-left-shooting l'>
+          <label>相册选图</label>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='page-body'>
+    <view class='check-carde '>
+        <view class='check-carde-head'>收纳的纸名片</view>
+        <view wx:for="{{}}">
+        
+        
+        </view>
+        <view class="check-carde-down" wx:if="{{true}}">0张纸名片</view>
+    </view>
+  </view>
+  <button class='button-bottom' bindtap='onBreak'>进入我的名片夹</button>
+</view>

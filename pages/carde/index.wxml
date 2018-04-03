@@ -2,8 +2,8 @@
 
 <view class="page">
 
-     <view class="search" wx:if="{{isShow}}">
-        <view class='search-body'>
+     <view class="search" >
+        <view class='search-body' wx:if="{{isShow==true}}">
             <view class='search-input'>
                 <view class="search-box" bindtap='onFilterInput'>
                     <view class='search-icon'>
@@ -15,7 +15,17 @@
                     </view>
                 </view>
             </view>
-            
+        </view>
+        <view class='search-body' wx:if="{{isShow==false}}">
+          <view class='image-title' bindtap='selectAlbum'>
+            <image mode='aspectFit'  src='/assets/image/index/查看相册.png'></image>
+          </view>
+          <view class='image-title' bindtap='selectTrade'>
+            <image mode='aspectFit'  src='/assets/image/index/群.png'></image>
+          </view>
+          <view class='image-title'>
+            <image mode='aspectFit' src='/assets/image/index/搜索.png'></image>
+          </view>
         </view>
     </view>  
     <view class='page-head'>
@@ -31,12 +41,12 @@
         </view>
     
         <view class='head-body'>
-            <view class='body-all'>
-                <view class='body-icon'></view>
+            <view class='body-all' bindtap='selectAlbum'>
+                <view class='body-icon'><image mode='aspectFit' src='/assets/image/index/查看相册.png'></image></view>
                 <view class='body-text'>纸名片收纳</view>
             </view>
-            <view class='body-all'>
-                <view class='body-icon'></view>
+            <view class='body-all' bindtap='selectTrade'>
+                <view class='body-icon'><image mode='aspectFit' src='/assets/image/index/群.png'></image></view>
                 <view class='body-text'>微信群换名片</view>
             </view>
         </view>
