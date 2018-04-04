@@ -1,13 +1,88 @@
 <view class='page'>
-    <view class='page-head'>
-        <view class='page-head-h' bindtap=''>取消</view>
-        <view class='page-head-f' bindtap=''>保存</view>
-    </view>
-
-    <view class='page-body'>
-        <view class='page-body-all'>
-        
-        
+  <view class='page-all'>
+    <form class='form' bindsubmit="formSubmit">
+      <view class='head'>
+          <view class='head-h' bindtap='onback'>取消</view>
+          <view class='head-f' bindtap='onSubmit'><button class='head-f-btn' form-type='submit'>保存</button></view>
+      </view>
+      <view class='body'>
+         <view class='body-image'>
+            <image mode='scaleToFill' src='/assets/image/cardes/card-0.png'></image>
         </view>
-    </view>
+        <view class='body-body'>
+            <scroll-view class='body-select'>
+                <view class='select-image'>
+                    <image src='/assets/image/cardes/card-0.png'></image>
+                </view>
+                <view class='select-image'>
+                    <image src='/assets/image/cardes/card-1.png'></image>
+                </view>
+                <view class='select-image'>
+                    <image src='/assets/image/cardes/card-2.png'></image>
+                </view>
+                <view class='select-image'>
+                    <image src='/assets/image/cardes/card-3.png'></image>
+                </view>
+                <view class='select-image'>
+                    <image src='/assets/image/cardes/card-4.png'></image>
+                </view>
+                <view class='select-image'>
+                    <image src='/assets/image/cardes/card-5.png'></image>
+                </view>
+            </scroll-view>
+            <view class='body-message'>
+                <label class='body-message-h'>*</label>
+                <label class='body-message-b'>姓名</label>
+                <label class='body-message-f'><input name="" value='' bindinput='inputMessage' data-Type='name' placeholder="必填"></input></label>
+            </view>
+            <view class='body-message'>
+                <label class='body-message-h'>*</label>
+                <label class='body-message-b'>公司/单位</label>
+                <label class='body-message-f'><input name="" value='' bindinput='inputMessage' data-Type='companyname' placeholder="必填"></input></label>
+            </view>
+            <view class='body-message'>
+                <label class='body-message-h'>*</label>
+                <label class='body-message-b'>部门/职务</label>
+                <label class='body-message-f'><input name="" value='' bindinput='inputMessage' data-Type='job' placeholder="必填"></input></label>
+            </view>
+            <view class='body-message'>
+                <label class='body-message-t'>手机</label>
+                <label class='body-message-f'><input name="" bindinput='inputMessage' data-Type='phone' value=''></input></label>
+            </view>
+            <view class='body-message'>
+                <label class='body-message-t'>邮箱</label>
+                <label class='body-message-f'><input name="" bindinput='inputMessage'  data-Type='email' value=''></input></label>
+            </view>
+            <view class='body-message'>
+                <label class='body-message-t'>电话</label>
+                <label class='body-message-f'><input name=""  bindinput='inputMessage' data-Type='tel' value=''></input></label>
+            </view>
+            <view class='body-message'>
+                <label class='body-message-t'>地址</label>
+                <label class='body-message-f'><input name="" bindinput='inputMessage' data-Type='add' value=''></input></label>
+            </view>
+            <view class='body-message'>
+                <label class='body-message-t'>微信</label>
+                <label class='body-message-f'><input name="" bindinput='inputMessage' data-Type='wechat' value=''></input></label>
+            </view>
+            <view class='body-btn'>
+                <button>添加更多信息</button>
+            </view>
+            <view class='body-textarea'>
+                <view class='body-textarea-head'>
+                    <view>公司简介：</view>
+                    <view>{{profilesize}}/140</view>
+                </view>
+                <textarea bindinput="inputMessage" data-Type='Introduction' placeholder-style="" maxlength="140" placeholder="请您填写公司简介"></textarea>
+            </view>
+            <view class='body-album'>
+                <view class='album-text'>名片相册：</view>
+                <view class='album-add' bindtap='onCard'>
+                    <image src='/assets/image/tabber/add.png'></image>
+                </view>
+            </view> 
+        </view>
+      </view>
+    </form>
+  </view>
 </view>

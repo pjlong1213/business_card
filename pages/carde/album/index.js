@@ -112,5 +112,10 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  onBreak: function () {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
 })

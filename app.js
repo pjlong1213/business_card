@@ -27,10 +27,17 @@ App({
             'content-type': 'json'
           },
           success: function (res) {
+            console.log(res)
             var openid = res.data.openid //返回openid
+            var sessionkey = res.data.session_key
             wx.setStorageSync("openId", openid)
+            wx.setStorageSync("sessionkey", sessionkey)
             console.log('openid为' + openid);
+            console.log('sessionkey为' + sessionkey);
           }
+        })
+        wx.request({
+          url: '',
         })
       }
     })
@@ -43,7 +50,7 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
-
+              console.log(res)
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {

@@ -31,19 +31,38 @@ let _getOpenId = (cell) => {
 
 class wxRequestHelper {
   constructor() {}
+  /**
+   * 查询联系人
+   */
   contact(){
-    var http = _structure("/data/queryList/Contact")
+    var http = _structure("/data/insert/Contact")
     return{
-      get : ()=>{
-        if(_getOpenId((openId)=>{
-          
-        })){
-
-        }
+      post : (data)=>{
+        
         return http.post(data)
       }
     }
   }
+  /**
+   * 注册观众基本信息
+   */
+  Visitor() {
+    var http = _structure("/data/VisitorReg")
+    var httpInfo = _structure("/data/insert/Visitor")
+    return{
+      post : (data)=>{
+
+        return http.post(data)
+      },
+      postInfo: (data)=>{
+        return httpInfo.post(data)
+      }
+
+    }
+
+  }
+
+
 }
 
 export default wxRequestHelper

@@ -1,11 +1,11 @@
-// pages/carde/index.js
+// pages/login/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  isShow : true
+  
   },
 
   /**
@@ -14,21 +14,7 @@ Page({
   onLoad: function (options) {
   
   },
-  selectAlbum(){
-    wx.navigateTo({
-      url: '/pages/carde/album/index',
-    })
-  },
-  selectTrade() {
-    wx.navigateTo({
-      url: '/pages/carde/trade/trade',
-    })
-  },
-  getPhoneNumber: function (e) {
-    console.log(e.detail)
-    console.log(e.detail)
-    console.log(e.detail)
-  } ,
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -42,12 +28,7 @@ Page({
   onShow: function () {
   
   },
-  onFilterInput: function () {
-    console.log("1111111111111111")
-    wx.navigateTo({
-      url: '/pages/carde/serch/index',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

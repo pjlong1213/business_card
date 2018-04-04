@@ -6,9 +6,12 @@
     ,"pages/carde/other/other"
     ,"pages/sendCarde/index"
     ,"pages/sendCarde/outCarde/outCarde"
+    ,"pages/sendCarde/rank/rank"
     ,"pages/more/index"
     ,"pages/more/helper/helper"
     ,"pages/carde/album/index"
+    ,"pages/carde/trade/trade"
+    ,"pages/login/index"
     
   ],
   "window":{

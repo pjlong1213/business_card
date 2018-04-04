@@ -12,11 +12,11 @@ module.exports = {
         /**
          * 小程序唯一标识
          */
-      APPID: 'wxc76e61c8bd1378da',
+      APPID: 'wx15b1bde946705e10',
         /**
          * 小程序的 app secret
          */
-      SECRET: 'c7708825748c31bb27bbb162b1b4f71c',
+      SECRET: '6967a15180e2aef3578a4edd29b1fa8b',
         /**
          * 微信端 API 接口
          */
