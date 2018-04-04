@@ -6,28 +6,13 @@
           <view class='head-f' bindtap=''><button class='head-f-btn' form-type='submit'>保存</button></view>
       </view>
       <view class='body'>
-         <view class='body-image'>
-            <image mode='scaleToFill' src='/assets/image/cardes/card-0.png'></image>
+         <view class='body-image' style='background: url(../../..{{backgroundimage}});background-size: 100% 100%;'>
+
         </view>
         <view class='body-body'>
-            <scroll-view class='body-select'>
-                <view class='select-image'>
-                    <image src='/assets/image/cardes/card-0.png'></image>
-                </view>
-                <view class='select-image'>
-                    <image src='/assets/image/cardes/card-1.png'></image>
-                </view>
-                <view class='select-image'>
-                    <image src='/assets/image/cardes/card-2.png'></image>
-                </view>
-                <view class='select-image'>
-                    <image src='/assets/image/cardes/card-3.png'></image>
-                </view>
-                <view class='select-image'>
-                    <image src='/assets/image/cardes/card-4.png'></image>
-                </view>
-                <view class='select-image'>
-                    <image src='/assets/image/cardes/card-5.png'></image>
+            <scroll-view class='body-select'scroll-x="true">
+                <view wx:for="{{imageUrl}}" class='select-image'>
+                    <image src='{{item}}' bindtap='onChangeimage'data-value='{{item}}' data-id='{{index}}'></image>
                 </view>
             </scroll-view>
             <view class='body-message'>
@@ -45,33 +30,17 @@
                 <label class='body-message-b'>部门/职务</label>
                 <label class='body-message-f'><input name="" value='' placeholder="必填"></input></label>
             </view>
-            <view class='body-message'>
-                <label class='body-message-t'>手机</label>
-                <label class='body-message-f'><input name="" value=''></input></label>
-            </view>
-            <view class='body-message'>
-                <label class='body-message-t'>邮箱</label>
-                <label class='body-message-f'><input name="" value=''></input></label>
-            </view>
-            <view class='body-message'>
-                <label class='body-message-t'>电话</label>
-                <label class='body-message-f'><input name="" value=''></input></label>
-            </view>
-            <view class='body-message'>
-                <label class='body-message-t'>地址</label>
-                <label class='body-message-f'><input name="" value=''></input></label>
-            </view>
-            <view class='body-message'>
-                <label class='body-message-t'>微信</label>
-                <label class='body-message-f'><input name="" value=''></input></label>
+            <view wx:for="{{cardedata}}" class='body-message'>
+                <label class='body-message-t'>{{item.key}}</label>
+                <label class='body-message-f'><input name="{{item.value}}" value=''></input></label>
             </view>
             <view class='body-btn'>
-                <button>添加更多信息</button>
+                <button bindtap='addmessage'>添加更多信息</button>
             </view>
             <view class='body-textarea'>
                 <view class='body-textarea-head'>
                     <view>公司简介：</view>
-                    <view>{{profilesize}}/140</view>
+                    <view>{{profilesize || 0}}/140</view>
                 </view>
                 <textarea bindinput="onchangeSize" placeholder-style="" maxlength="140" placeholder="请您填写公司简介"></textarea>
             </view>
@@ -80,9 +49,13 @@
                 <view class='album-add'>
                     <image src='/assets/image/tabber/add.png'></image>
                 </view>
-            </view> 
+            </view>
         </view>
+
       </view>
     </form>
   </view>
 </view>
+<picker disabled="{{disabled}}" mode="selector" range="{{morecardedata}}" value="{{index}}" bindchange="listenerPickerSelected">
+    <text>{{morecardedata[index].key}}</text>
+</picker>
