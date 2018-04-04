@@ -136,52 +136,28 @@ Page({
       return
     }
     let userInfo = wx.getStorageSync("userInfo") == null ? null : wx.getStorageSync("userInfo")
-    if (userInfo == null){
-      let data = {
-        params: {
-          record: {
-            CompanyName: companyname,
-            UserName: phone == null ? "" : phone,
-            UserPassword: "888888",
-            Name: name,
-            Type: "4",
-            ExhibitionId: "5ab22555d8d2b4783bfb7337"
-          }
+    let dataContact = {
+      tenantId: userInfo.TenantId,
+      userId: userInfo.UserId,
+      params: {
+        record: {
+          Name: name,
+          Address: add == null ? "" : add,
+          Tel: tel,
+          Phone: phone,
+          Email: email,
+          Job: job,
+          Department : "",
+          Company: companyname,
+          Image: _this.data.image == null ? "" : _this.data.image,
+          "HaveCalled": false,
+          "HaveSendMsg": false,
+          "HaveSendEmail": false,
+          "ExhibitionId": "5ab22555d8d2b4783bfb7337"
         }
       }
-      $.request.Visitor().post(data).then(res => {
-        if (res.resCode == 0) {
-          let result = res.result
-          wx.setStorageSync("userInfo", result)
-          let openId = wx.getStorageSync("openId")
-          let dateInfo = {
-            tenantId: result.TenantId,
-            userId: result.UserId,
-            params: {
-              record: {
-                AccountId: userInfo.UserId,
-                ExhibitionId: "5ab22555d8d2b4783bfb7337",
-                Name: name,
-                CompanyName: companyname,
-                CompNameEn: "",
-                Job: job == null ? "" : job,
-                Mob: phone,
-                CardPath: _this.data.image == null ? "" : _this.data.image,
-                CompAddr: add == null ? "" : add
-              }
-            }
-          }
-          $.request.Visitor().postInfo(dateInfo).then(ress=>{
-            if(ress.resCode == 0){
-              wx.navigateBack({
-                delta :-1
-              })
-            }
-          })
-        }
-      })
-    }else{
-      
+    }
+    if (userInfo == null){
       let openId = wx.getStorageSync("openId")
       let dateInfo = {
         tenantId: userInfo.TenantId,
@@ -202,27 +178,24 @@ Page({
       }
       $.request.Visitor().postInfo(dateInfo).then(ress => {
         if (ress.resCode == 0) {
-          let dataContact = {
-            tenantId: userInfo.TenantId,
-            userId: userInfo.UserId,
-            params: {
-              record: {
-                Name: name,
-                
-              }
-            }
-          }
-          $.request.contact().post(dateInfo).then(ress => {
-
-          })
-          wx.navigateBack({
-            delta: -1
-          })
+          _this.onContact(dataContact)
+          
         }
       })
+    }else{
+      
+      _this.onContact(dataContact)
+      
     }
     
 
+  },
+  onContact(dataContact){
+    $.request.contact().post(dataContact).then(ress => {
+      wx.navigateBack({
+        delta: -1
+      })
+    })
   },
   onCard(e){
     setNoRefresh = true;

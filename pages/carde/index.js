@@ -1,18 +1,45 @@
 // pages/carde/index.js
+let app = getApp()
+let $ = getApp().$
+let _this
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  isShow : true
+    isShow : true,
+    cardes : []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    _this = this
+    _this.onselect()
+  },
+  onselect(){
+    let userInfo = wx.getStorageSync("userInfo")
+    let data = {
+      tenantId: userInfo.TenantId,
+      userId : userInfo.UserId,
+      params : {
+        condition : {
+        }
+      }
+    }
+    $.request.contact().get(data).then(res=>{
+      if(res.resCode == 0){
+        let result = res.result
+        _this.setData({
+          cardes: result
+        })
+      }
+    })
+
+
   },
   selectAlbum(){
     wx.navigateTo({

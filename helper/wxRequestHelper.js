@@ -36,10 +36,15 @@ class wxRequestHelper {
    */
   contact(){
     var http = _structure("/data/insert/Contact")
+    var httpget = _structure("/data/queryList/Contact")
     return{
       post : (data)=>{
         
         return http.post(data)
+      },
+      get : (data) => {
+
+        return httpget.post(data)
       }
     }
   }

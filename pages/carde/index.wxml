@@ -63,15 +63,15 @@
               <view class='card-head-h'><i class="iconfont icon-tianjia"></i></view>
               <view class='card-head-b'>我的名片</view>
             </view>
-            <view class='card-body' wx:for="{{false}}">
-              <view class='card-body-i'><image src=""></image></view>
+            <view class='card-body' wx:if="{{cardes.length>0}}" wx:for="{{cardes}}">
+              <view class='carte-image'><image class='image' src="{{item.Image==''?'/assets/image/index/20180330100755.png':item.Image}}"></image></view>
               <view class='card-body-t'>
-                  <view class='text-h'>{{item}}</view>
-                  <view class='text-b'>{{item}}</view>
-                  <view class='text-b'>{{item}}</view>
+                  <view class='text-h'>{{item.Name}}</view>
+                  <view class='text-b'>{{item.Company}}</view>
+                  <view class='text-b'>{{item.Job}}</view>
               </view>
             </view>
-            <view class='card-body' wx:if="{{true}}">
+            <view class='card-body' wx:if="{{cardes.length==0}}">
                <!-- <view class='card-body-i'><image src=""></image></view>
               <view class='card-body-t'>
                   <view class='text-h' style='color:#C0C0C0'>我的名字</view>
