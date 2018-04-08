@@ -236,6 +236,7 @@ Page({
       filePath: tempFilePaths,
       name: "exhibitor-linkmain-headimg-jiangchao",
       success: function (res) {
+        console.log(res)
         let data = JSON.parse(res.data)
         if (data.code == 0) {
           wx.showToast({

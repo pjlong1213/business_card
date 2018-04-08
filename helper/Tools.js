@@ -691,6 +691,20 @@ class Tools {
     }
     return [year, month, day].map(formatNumber).join(isolation) + ' ' + [hour, minute, second].map(formatNumber).join(':')
 
+  };
+
+  /**
+   * 将绝对路径转换成base64位
+   */
+  getBase64Image(){
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0, img.width, img.height);
+    var ext = img.src.substring(img.src.lastIndexOf(".") + 1).toLowerCase();
+    var dataURL = canvas.toDataURL("image/" + ext);
+    return dataURL;
   }
 }
 

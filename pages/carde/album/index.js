@@ -77,7 +77,19 @@ Page({
       return;
     }
   },
-  
+  onImageString(base64Image){
+   wx.request({
+     url: 'http://dm-57.data.aliyun.com/rest/160601/ocr/ocr_business_card.json',
+     data :{
+       dataType : 50,
+       dataValue: base64Image
+     },
+     method: "POST",
+     header : {
+       Authorization: 'APPCODE 6227ab3f96e84029bee837fc79d8dfb6'
+     }
+   })
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

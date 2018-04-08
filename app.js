@@ -21,18 +21,18 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         console.log(res.code)
         var code = res.code
-        var appId = 'wx447a9da914f5cde6';
-        var secret = 'c7708825748c31bb27bbb162b1b4f71c';
+        var appId = 'wx15b1bde946705e10';
+        var secret = '6b49bdbfa8cfb1ecbe5004ad27617c9f';
         wx.request({
           url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + code + '&grant_type=authorization_code',
           data: {},
           header: {
             'content-type': 'json'
           },
-          success: function (res) {
-            console.log(res)
-            var openid = res.data.openid //返回openid
-            var sessionkey = res.data.session_key
+          success: function (ress) {
+            console.log(ress)
+            var openid = ress.data.openid //返回openid
+            var sessionkey = ress.data.session_key
             wx.setStorageSync("openId", openid)
             wx.setStorageSync("sessionkey", sessionkey)
             console.log('openid为' + openid);

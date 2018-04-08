@@ -2,6 +2,7 @@
 let app = getApp()
 let $ = getApp().$
 let _this
+let tool = $.tool
 
 Page({
 
@@ -36,10 +37,24 @@ Page({
       if(res.resCode == 0){
         let result = res.result
         console.log(result)
+        let cardes 
+        if (result.length>0){
+          cardes = result
+          for (let c of cardes){
+            if (tool.isArray(c.Company)){
+              c.isArray = true
+            }else{
+              
+              c.isArray = false
+      
+            }
+          }
+        }
         _this.setData({
           result: result,
-          cardes: [result[0]]
+          cardes: [cardes[0]]
         })
+        
       }
     })
 
@@ -56,9 +71,7 @@ Page({
     })
   },
   getPhoneNumber: function (e) {
-    console.log(e.detail)
-    console.log(e.detail)
-    console.log(e.detail)
+    
   } ,
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -130,7 +143,7 @@ Page({
     
   },
   onPageScroll(e){
-    console.log(e)
+    // console.log(e)
     let scroll = e.scrollTop
     if (scroll>10){
       _this.setData({

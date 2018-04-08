@@ -68,8 +68,15 @@
               <view class='carte-image'><image class='image' src="{{item.Image==''?'/assets/image/index/20180330100755.png':'/assets/image/index/20180330100755.png'}}"></image></view>
               <view class='card-body-t'>
                   <view class='text-h'>{{item.Name}}</view>
-                  <view class='text-b'>{{item.Company}}</view>
-                  <view class='text-b'>{{item.Job}}</view>
+                  <view wx:if="{{item.isArray}}">
+                    <view class='text-b' wx:for="{{item.Company}}" wx:for-item="company">{{company.value}}</view>
+                    <view class='text-b' wx:for="{{item.Job}}" wx:for-item="job">{{job.value}}</view>
+                  </view>
+                  <view wx:if="{{!item.isArray}}">
+                    <view class='text-b'>{{item.Company}}</view>
+                    <view class='text-b'>{{item.Job}}</view>
+                  </view>
+                  
               </view>
             </view>
             <view class='card-body' wx:if="{{cardes.length==0}}">
