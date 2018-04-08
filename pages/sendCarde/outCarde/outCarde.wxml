@@ -1,9 +1,8 @@
 <view class='page'>
   <view class='page-all'>
-    <form class='form' bindsubmit="formSubmit">
       <view class='head'>
           <view class='head-h' bindtap='onback'>取消</view>
-          <view class='head-f' bindtap='onSubmit'><button class='head-f-btn' form-type='submit'>保存</button></view>
+          <view class='head-f' bindtap='onSubmit'><button class='head-f-btn'>保存</button></view>
       </view>
       <view class='body'>
          <view class='body-image' style='background: url(../../..{{backgroundimage}});background-size: 100% 100%;'>
@@ -30,16 +29,43 @@
                 <label class='body-message-b'>部门/职务</label>
                 <label class='body-message-f'><input name="" value='' bindinput='inputMessage' data-Type='job' placeholder="必填"></input></label>
             </view>
-            <view wx:for="{{cardedata}}" class='body-message'>
-                <label class='body-message-t'>{{item.key}}</label>
-                <label class='body-message-f'><input name="{{item.value}}" value=''></input></label>
+            <view wx:for="{{phone}}" class='body-message'>
+                <label class='body-message-t'>{{item.label}}</label>
+                <label class='body-message-f'><input value='' bindinput='inputMessage' data-Type='phone'></input></label>
             </view>
-            <view class='body-btn'>
-                <button class="section__title">添加更多信息</button>
-                <picker range="{{morecardedata}}" value="{{index}}" bindchange="listenerPickerSelected">
-                    <text>{{morecardedata[index].key}}</text>
+            <view wx:for="{{email}}" class='body-message'>
+                <label class='body-message-t'>{{item.label}}</label>
+                <label class='body-message-f'><input value='' bindinput='inputMessage' data-Type='email'></input></label>
+            </view>
+            <view wx:for="{{tel}}" class='body-message'>
+                <label class='body-message-t'>{{item.label}}</label>
+                <label class='body-message-f'><input value='' bindinput='inputMessage' data-Type='tel'></input></label>
+            </view>
+            <view wx:for="{{add}}" class='body-message'>
+                <label class='body-message-t'>{{item.label}}</label>
+                <label class='body-message-f'><input value='' bindinput='inputMessage' data-Type='add'></input></label>
+            </view>
+            <view class='body-message'>
+                <label class='body-message-t'>微信</label>
+                <label class='body-message-f'><input value='' bindinput='inputMessage' data-Type='wechat'></input></label>
+            </view>
+            <view wx:for="{{urlpath}}" class='body-message'>
+                <label class='body-message-t'>{{item.label}}</label>
+                <label class='body-message-f'><input value='' bindinput='inputMessage' data-Type='urlpath'></input></label>
+            </view>
+            <view wx:for="{{faxes}}" class='body-message'>
+                <label class='body-message-t'>{{item.label}}</label>
+                <label class='body-message-f'><input value='' bindinput='inputMessage' data-Type='faxes'></input></label>
+            </view>
+            <view wx:for="{{other}}" class='body-message'>
+                <label class='body-message-t'>{{item.label}}</label>
+                <label class='body-message-f'><input value='' bindinput='inputMessage' data-Type='other'></input></label>
+            </view>
+             <view class='body-btn'>
+                <picker range="{{more}}" value="{{index}}" bindchange="listenerPickerSelected">
+                    <button class="section__title">添加更多信息</button>
                 </picker>
-            </view>
+            </view> 
             <view class='body-textarea'>
                 <view class='body-textarea-head'>
                     <view>公司简介：</view>
@@ -50,12 +76,14 @@
             <view class='body-album'>
                 <view class='album-text'>名片相册：</view>
                 <view class='album-add' bindtap='onCard'>
+                    <image src='{{image}}'></image>
+                </view>
+                <view class='album-add' bindtap='onCard'>
                     <image src='/assets/image/tabber/add.png'></image>
                 </view>
             </view>
         </view>
 
       </view>
-    </form>
   </view>
 </view>
