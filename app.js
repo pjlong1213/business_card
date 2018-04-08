@@ -6,7 +6,10 @@ import wxDataStorage from './helper/wxDataStorage'
 import tool from './helper/Tools'
 
 App({
-  onLaunch: function () {
+  onLaunch: function (ops) {
+    if(ops.scene == 1044){
+      console.log(ops.shareTicket)
+    }
     // 展示本地存储能力
     // var logs = wx.getStorageSync('logs') || []
     // logs.unshift(Date.now())

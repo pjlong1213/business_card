@@ -1,5 +1,6 @@
 page {
     background-color: #efeff4;
+    /* width: 200px; */
 }
 .page-body,.page-footer{
   padding-bottom: 50rpx;

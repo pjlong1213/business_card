@@ -69,8 +69,14 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function (res) {
+    if(res.from == "button"){
+
+    }
+    return {
+      title : "您好，这是我的名片，请惠存",
+      path : "/pages/sendCarde/index"
+    }
   },
   chooseimage: function () {
     var _this = this;
