@@ -19,7 +19,7 @@
     display: flex;
     display: -webkit-flex;
     align-items: center;
-    margin: 20rpx;
+    margin: 20rpx; 
     top: 0;
 }
 

@@ -10,7 +10,9 @@ Page({
    */
   data: {
     isShow : true,
-    cardes : []
+    cardes : [],
+    isunfold : true,
+    isMore : true
   },
 
   /**
@@ -33,8 +35,10 @@ Page({
     $.request.contact().get(data).then(res=>{
       if(res.resCode == 0){
         let result = res.result
+        console.log(result)
         _this.setData({
-          cardes: result
+          result: result,
+          cardes: [result[0]]
         })
       }
     })
@@ -92,15 +96,51 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function (e) {
+    console.log(111)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+     
+  },
+  onMore(){
+    let results  = this.data.result
+    let result = [results[0]]
+    console.log(this.data.isMore)
+    if (this.data.isMore){
+
+      console.log("222")
+      this.setData({
+        cardes: results
+      })
+    }
+    else{
+      console.log("111")
+      this.setData({
+        cardes: result
+      })
+    }
+    
+    this.setData({
+      isMore: !this.data.isMore
+    })
+    
+  },
+  onPageScroll(e){
+    console.log(e)
+    let scroll = e.scrollTop
+    if (scroll>10){
+      _this.setData({
+        isShow: false
+      })
+    }else{
+      _this.setData({
+        isShow: true
+      })
+    }
   },
 
   /**
