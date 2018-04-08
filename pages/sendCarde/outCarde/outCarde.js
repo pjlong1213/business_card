@@ -15,13 +15,16 @@ Page({
     name: null,
     companyname: null,
     job: null,
-    phone: null,
-    email: null,
-    add: null,
-    tel: null,
+    image : [],
+    phone: [{ label: "手机" }],
+    email: [{ label: "邮箱" }],
+    add: [{ label: "地址" }],
+    tel: [{ label: "电话" }],
     wechat: null,
-    Introduction: null
-
+    Introduction: null,
+    urlpath:[],
+    faxes: [],
+    other: [],
   },
 
   /**
@@ -29,14 +32,7 @@ Page({
    */
 
   onLoad: function (options){
-    let cardedata = [{ key: "手机", vlaue: "phone" }, { key: "邮箱", vlaue: "mailbox" }, { key: "电话", vlaue: "mob" },
-                     { key: "地址", vlaue: "address" }, { key: "微信", vlaue: "WeChat" }];
-
-    let morecardedata = [{ key: "其它", vlaue: "other" }, { key: "手机", vlaue: "phone" }, { key: "邮箱", vlaue: "mailbox" },
-                        { key: "电话", vlaue: "mob" }, { key: "地址", vlaue: "address" }, { key: "网址", vlaue: "urlpath" },
-                        { key: "传真", vlaue: "faxes" }]
-
-
+    let more = ["其它", "手机", "邮箱", "电话", "地址", "网址", "传真"];
     let imageUrl = ["/assets/image/cardes/card-0.png", "/assets/image/cardes/card-1.png", 
                     "/assets/image/cardes/card-2.png", "/assets/image/cardes/card-3.png", 
                     "/assets/image/cardes/card-4.png","/assets/image/cardes/card-5.png"]
@@ -44,9 +40,8 @@ Page({
     this.setData({
       imageUrl,
       backgroundimage,
-      cardedata,
-      morecardedata,
-      disabled
+      more,
+      disabled,
     })
     _this = this
   },
@@ -135,6 +130,7 @@ Page({
 
   },
   onSubmit(){
+    console.log(this.data.image)
     let name = _this.data.name
     let companyname = _this.data.companyname
     let job = _this.data.job
@@ -204,8 +200,8 @@ Page({
         }
       })
     }else{
-      
-      _this.onContact(dataContact)
+      console.log(dataContact)
+      // _this.onContact(dataContact)
       
     }
     
@@ -222,32 +218,43 @@ Page({
     setNoRefresh = true;
     console.log(e)
     wx.chooseImage({
-      count: 5,
+      count: 9,
       sourceType: ["camera","album"],
       success: function (res) {
-        let tempFilePaths = res.tempFilePaths[0]
-        _this.onUploadFile(tempFilePaths)
+        let tempFilePaths = res.tempFilePaths;
+        console.log(tempFilePaths)
+        _this.onUploadFile(tempFilePaths); 
       },
     })
+
   },
   onUploadFile(tempFilePaths) {
-    wx.uploadFile({
-      url: "https://deal.xiaovbao.cn/applet/album/upload",
-      filePath: tempFilePaths,
-      name: "exhibitor-linkmain-headimg-jiangchao",
-      success: function (res) {
-        console.log(res)
-        let data = JSON.parse(res.data)
-        if (data.code == 0) {
-          wx.showToast({
-            title: '上传成功',
-          })
-          _this.setData({
-            image: data.data.imgUrl
-          })
+    let arrayFile = []
+    for (let t of tempFilePaths){
+      let uploadFile = wx.uploadFile({
+        url: "https://deal.xiaovbao.cn/applet/album/upload",
+        filePath: t,
+        name: "exhibitor-linkmain-headimg-jiangchao",
+        success: function (res) {
+
+          let data = JSON.parse(res.data)
+          if (data.code == 0) {
+            wx.showToast({
+              title: '上传成功',
+            })
+            let image = _this.data.image
+            let images = image.concat(data.data.imgUrl)
+           
+            _this.setData({
+              image: images
+            })
+            console.log("上传成功")
+            console.log(_this.data.image)
+          }
         }
-      }
-    })
+      })
+      
+    }
   },
   /**
    * 页面上拉触底事件的处理函数
@@ -269,9 +276,6 @@ Page({
     wx.navigateBack({
       delta: 1
     })
-  },
-  formSubmit: function (e) {
-    console.log('form发生了submit事件，携带数据为：', e.detail.value)
   },
 
   onShooting(e){
@@ -298,6 +302,46 @@ Page({
     this.setData({ disabled })
   },
   listenerPickerSelected: function (e) {
+    console.log(e);
+    let index = e.detail.value;
+    switch (index){
+      case "0":
+        let other = this.data.other
+        other.push({label:"其它"})
+        this.setData({ other });
+      break;
+      case "1":
+        let phone = this.data.phone
+        phone.push({ label: "手机" })
+        this.setData({ phone });
+      break;
+      case "2":
+        let email = this.data.email
+        email.push({ label: "邮箱" })
+        this.setData({ email });
+      break;
+      case "3":
+        let tel = this.data.tel
+        tel.push({ label: "电话" })
+        this.setData({ tel });
+      break;
+      case "4":
+        let add = this.data.add
+        add.push({ label: "地址" })
+        this.setData({ add });
+      break;
+      case "5":
+        let urlpath = this.data.urlpath
+        urlpath.push({ label: "网址" })
+        this.setData({ urlpath });
+      break;
+      case "6":
+        let faxes = this.data.faxes
+        faxes.push({ label: "传真" })
+        this.setData({ faxes });
+      break;
+    }
+
     //改变index值，通过setData()方法重绘界面
     this.setData({
       index: e.detail.value

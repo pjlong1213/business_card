@@ -30,45 +30,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
-			"list": [
-				{
-					"id": -1,
-					"name": "更多",
-					"pathName": "pages/more/index",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "名片夹",
-					"pathName": "pages/carde/index",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "搜索",
-					"pathName": "pages/carde/serch/index",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "发名片",
-					"pathName": "pages/sendCarde/index",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "递名片",
-					"pathName": "pages/sendCarde/outCarde/outCarde",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "拍照",
-					"pathName": "pages/carde/album/index",
-					"query": ""
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }

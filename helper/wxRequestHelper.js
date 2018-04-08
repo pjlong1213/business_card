@@ -17,6 +17,7 @@ let _structure = (controller_Name, paramDefaults, actions, options) => {
 let _getOpenId = (cell) => {
 
   let openId = wx.getStorageSync('openId');
+  console.log(openId)
   console.log(userInfo)
   // let exInfo = wx.getStorageSync('exInfo');
   // console.log(exInfo)
