@@ -129,13 +129,8 @@ Page({
       display: "none"
     })
   },
-  onOrderBy(){
-    wx.navigateTo({
-      url: '/pages/sendCarde/rank/rank'
-    })
-  },
   ondelete (){
     console.log("删除")
-  },
+  }
 
 })

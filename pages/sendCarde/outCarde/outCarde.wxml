@@ -3,7 +3,7 @@
     <form class='form' bindsubmit="formSubmit">
       <view class='head'>
           <view class='head-h' bindtap='onback'>取消</view>
-          <view class='head-f' bindtap=''><button class='head-f-btn' form-type='submit'>保存</button></view>
+          <view class='head-f' bindtap='onSubmit'><button class='head-f-btn' form-type='submit'>保存</button></view>
       </view>
       <view class='body'>
          <view class='body-image' style='background: url(../../..{{backgroundimage}});background-size: 100% 100%;'>
@@ -18,35 +18,38 @@
             <view class='body-message'>
                 <label class='body-message-h'>*</label>
                 <label class='body-message-b'>姓名</label>
-                <label class='body-message-f'><input name="" value='' placeholder="必填"></input></label>
+                <label class='body-message-f'><input name="" value='' bindinput='inputMessage' data-Type='name' placeholder="必填"></input></label>
             </view>
             <view class='body-message'>
                 <label class='body-message-h'>*</label>
                 <label class='body-message-b'>公司/单位</label>
-                <label class='body-message-f'><input name="" value='' placeholder="必填"></input></label>
+                <label class='body-message-f'><input name="" value='' bindinput='inputMessage' data-Type='companyname' placeholder="必填"></input></label>
             </view>
             <view class='body-message'>
                 <label class='body-message-h'>*</label>
                 <label class='body-message-b'>部门/职务</label>
-                <label class='body-message-f'><input name="" value='' placeholder="必填"></input></label>
+                <label class='body-message-f'><input name="" value='' bindinput='inputMessage' data-Type='job' placeholder="必填"></input></label>
             </view>
             <view wx:for="{{cardedata}}" class='body-message'>
                 <label class='body-message-t'>{{item.key}}</label>
                 <label class='body-message-f'><input name="{{item.value}}" value=''></input></label>
             </view>
             <view class='body-btn'>
-                <button bindtap='addmessage'>添加更多信息</button>
+                <button class="section__title">添加更多信息</button>
+                <picker range="{{morecardedata}}" value="{{index}}" bindchange="listenerPickerSelected">
+                    <text>{{morecardedata[index].key}}</text>
+                </picker>
             </view>
             <view class='body-textarea'>
                 <view class='body-textarea-head'>
                     <view>公司简介：</view>
                     <view>{{profilesize || 0}}/140</view>
                 </view>
-                <textarea bindinput="onchangeSize" placeholder-style="" maxlength="140" placeholder="请您填写公司简介"></textarea>
+                <textarea bindinput="inputMessage" data-Type='Introduction' placeholder-style="" maxlength="140" placeholder="请您填写公司简介"></textarea>
             </view>
             <view class='body-album'>
                 <view class='album-text'>名片相册：</view>
-                <view class='album-add'>
+                <view class='album-add' bindtap='onCard'>
                     <image src='/assets/image/tabber/add.png'></image>
                 </view>
             </view>
@@ -56,6 +59,3 @@
     </form>
   </view>
 </view>
-<picker disabled="{{disabled}}" mode="selector" range="{{morecardedata}}" value="{{index}}" bindchange="listenerPickerSelected">
-    <text>{{morecardedata[index].key}}</text>
-</picker>

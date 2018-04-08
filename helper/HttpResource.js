@@ -60,7 +60,20 @@ class HttpResource {
                 return request
             },
             requestError: (requestError) => {
+              if (responseError.errMsg == "request:fail timeout") {
+                wx.showModal({
+                  title: '提示',
+                  confirmColor: '#6288d5',
+                  content: '网络超时'
+                });
+              } else {
                 wx.hideToast()
+                wx.showModal({
+                  title: '提示',
+                  confirmColor: '#6288d5',
+                  content: '请求失败,请检查网络是否正常'
+                });
+              }
                 return requestError
             },
             response: (response) => {
@@ -74,7 +87,7 @@ class HttpResource {
                     })
                 } 
                 
-                // wx.hideToast()
+                wx.hideToast()
                 return response
             },
             

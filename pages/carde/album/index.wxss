@@ -46,27 +46,3 @@
   font-size: 24rpx;
   color: white;
 }
-
-.page-body{
-  border-top: 50rpx solid #efeff4;
-}
-.check-carde{
-  background-color: #fff;
-}
-  .check-carde-head{
-    border-bottom: 3rpx solid #efeff4;
-    height: 70rpx;
-  }
-  .check-carde-down{
-    height: 80rpx;
-    text-align: center;
-    color: #8a8a8a;
-  }
-
-  .button-bottom{
-    background-color: #fff;
-    height: 70rpx;
-    font-size: 40rpx;
-    width: 80%;
-    line-height:1.7;
-  }

@@ -11,6 +11,7 @@
     ,"pages/more/helper/helper"
     ,"pages/carde/album/index"
     ,"pages/carde/trade/trade"
+    ,"pages/login/index"
     
   ],
   "window":{
